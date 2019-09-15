@@ -2,6 +2,7 @@ $(function() {
     /* Selectors */
     var body = $('body')
     var overlay = $('.overlay-products')
+    var productWrapper = $('#product-wrapper')
     var productDescription = $('.product-description')
     var productImg = $('.product-img')
     var closeProductContainer = $('.product-description-close-btn')
@@ -9,7 +10,6 @@ $(function() {
     /* Clickevents */
 
     /* Klick auf das Produktbild */
-
     body.on( "click",'.product-img', function() {
         if(jQuery(this).siblings(".product-description").is(":visible")){
             jQuery(this).removeClass('img-selected')
@@ -18,6 +18,7 @@ $(function() {
         }
         jQuery(this).siblings(".product-description").toggle("fast")
         overlay.toggle()
+        overlay.height(productWrapper.height())
     });
 
     /* Klick auf das Schliessen Icon */
@@ -33,4 +34,15 @@ $(function() {
         productImg.removeClass("img-selected")
         $('.product-description:visible').toggle("fast")
     });
+
+    /* Hover event */
+    
+    $('.product-container').mousemove(function(e){
+        renderevents(e)
+        // console.log(e)
+    })
+
+    function renderevents(e){
+        $('#infoblock').html(e.currentTarget.children[1].children[1].children[0].innerText)
+    }
 });
