@@ -282,9 +282,10 @@
 
 .overlay-products{
     position: absolute;
+    left: 0;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.075);
-    height: 800px;
-    width: 1600px;
+    height: 100%;
+    width: 100vw;
     display: none;
 }
