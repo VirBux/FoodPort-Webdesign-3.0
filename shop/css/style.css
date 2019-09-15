@@ -1,0 +1,272 @@
+/* Header */
+:root{
+    --header-height: 160px;
+    --nav-width: 150px;
+}
+
+#page-header{
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+    width: 100%;
+    background-color: var(--main-col);
+
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+}
+
+#logo{
+    /* height: 75px; */
+    width: 385px;
+    margin-left: 50px;
+}
+
+/*FoodPort Logo*/
+.logofarbe{
+    fill: var(--main-col-light);
+}
+
+#search-product{
+    width: 480px;
+    height: 48px;
+    background-color: white;
+    font-family: open-sans;
+    font-size: var(--txt-mittel);
+    color: var(--main-col);
+    padding: 5px;
+}
+
+#search-product::placeholder {
+    font-family: open-sans-italic;
+    font-size: var(--txt-normal);
+  }
+
+#page-main-nav{
+    
+}
+
+#page-main-nav > ul{
+    display: flex;
+    width: calc(4 * var(--nav-width));
+}
+
+#page-main-nav > ul > li{
+    height: var(--header-height);
+    width: var(--nav-width);
+}
+#page-main-nav > ul > li:hover{
+    background-color: var(--main-col-light);
+    cursor: pointer;
+}
+#page-main-nav > ul > li:hover>.nav-title{
+    color: var(--main-col);
+}
+
+.nav-img{
+    height: 80%;
+}
+.nav-title{
+    text-align: center;
+    height: 20%;
+    font-family: open-sans-bold;
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-style: bold;
+    color: var(--main-col-light);
+}
+
+/* Page Main */
+#page-main{
+    display: flex;
+    justify-content: center;
+}
+
+/* Product */
+#product-wrapper{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1600px;
+    background-color: ;
+}
+
+.product-container{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px lightgrey solid;
+}
+
+.product-description{
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: var(--desc-box-width);
+    border: 2px var(--main-col) solid;
+    border-radius: 15px;
+    background-color: white;
+    z-index: 10;
+}
+
+.product-description-header{
+    display: flex;
+    height: 45px;
+    margin: -2px -2px -2px -2px;
+    width: calc(var(--desc-box-width) - 4);
+    background-color: var(--blue-light);
+    border: 2px var(--main-col) solid;
+    border-radius: 13px 13px 0 0;
+}
+.product-description-vendor{
+    width: 417px;
+}
+
+.product-description-close-btn{
+    width: 45px;
+    height: 45px;
+    margin: -2px -2px 0 0;
+    border: 2px var(--main-col) solid;
+    border-radius: 0 13px 0 0;
+}
+
+.product-description-main{
+    width: var(--desc-box-width);
+    min-height: 320px;
+    padding: 12px;
+}
+
+.product-title{
+    font-family: open-sans-bold;
+}
+
+.product-properties{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.netto-container,
+.brutto-container,
+.price-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    background-color: lightblue;
+}
+
+.product-short-description{
+    border-left: 6px var(--main-col) solid;
+    padding-left: 10px;
+}
+
+.read-more{
+    display: block;
+    font-family: open-sans-bold;
+    color: var(--main-col);
+    margin-top: 8px;
+}
+
+/* Product Description Links part*/
+
+.product-links{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.product-links-col1,
+.product-links-col2{
+
+    width: 100%;
+    height: 37px;
+    border: 2px var(--main-col) solid;
+    border-radius: 10px;
+}
+
+.product-links-col1{
+    display: flex;
+    justify-content: space-between;
+}
+.product-links-col2{margin-top: 5px;}
+
+.nährwerte-container,
+.wikipedia-container{
+    display: flex;
+    justify-content: space-between;
+    border: 2px var(--main-col) solid;
+    height: 37px;
+    margin-top: -2px;
+    width: 51%;
+}
+.nährwerte-container{
+    border-radius: 10px 0 0 10px;
+    margin-left: -2px;
+}
+.wikipedia-container{
+    border-radius: 0 10px 10px 0;
+    margin-right: -2px;
+}
+
+.nährwerte-img,
+.wikipedia-img{
+    background-color: var(--main-col);
+    width: 35px;
+}
+
+.nährwerte-img{border-radius: 7px 0 0 7px;}
+.wikipedia-img{border-radius: 0 7px 7px 0}
+
+.nährwerte{margin-right: 35px;}
+.wikipedia{margin-left: 40px;}
+
+.product-links-more{text-align: center;}
+
+.product-add-cart-container{
+    display: flex;
+    width: 320px;
+    height: 55px;
+    margin: auto;
+    margin-top: 15px;
+    border: 2px var(--main-col) solid;
+    border-radius: 10px;
+}
+
+.add-cart-nav-container{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.add-cart-nav{
+    display: flex;
+}
+
+.add-qty{
+    text-align: center;
+    font-size: var(--txt-mittel);
+    height: 40px;
+    width: 40px
+}
+
+.minus-btn,
+.plus-btn{
+    height: 40px;
+    width: 20px;
+}
+
+.product-add-cart-btn{
+    width: 50%;
+}
+
+/* .product-description{
+    display: none;
+} */
+
+.active{
+    display: block!important;
+}

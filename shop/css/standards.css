@@ -1,0 +1,164 @@
+/* Rooteinstellungen */
+:root{
+    /* Colors */
+    --main-col: #0B8E36;
+    --main-col-light: #CFFFDF;
+    --blue: #0E5E79;
+    --blue-light: #D1F4FF; 
+    --red: #EF0000;
+    --red-light: #FFD7CF;
+
+    /* Fontsize big screen*/
+    --txt-sehr-klein: 10px;
+    --txt-klein: 14px;
+    --txt-normal: 18px;
+    --txt-mittel: 22px;
+    --txt-gross: 25px;
+    --txt-sehr-gross: 32px;
+
+    /* Description Box width*/
+    --desc-box-width: 460px;
+}
+    /* Fontsize small screen */
+@media screen and (max-width: 720px){
+    :root{
+        --txt-klein: 9px;
+        --txt-normal: 12px;
+        --txt-mittel: 16px;
+        --txt-gross: 20px;
+        --txt-sehr-gross: 24px;
+    }
+}
+
+
+/* ---------------------- Errors ----------------------*/
+#ie-execution{display: none;} /* IE greift diesen Display nicht */
+
+_:-ms-lang(x),
+#ie-execution {
+    display: block;
+}
+
+noscript{
+    z-index: 1000;
+    width: 100vw;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    top: 25px;
+    margin: auto;
+    background-color: rgba(194, 43, 15, 0.9);
+}
+noscript > a{
+    color: white;
+    text-decoration: none;
+}
+/* ---------------------- Errors end ----------------------*/
+/* ---------------------- Skip-links ----------------------*/
+
+
+/* ---------------------- Skip-end ----------------------*/
+
+/* ---------------------- Fontfamilys ---------------------- */
+@font-face{
+    font-family: open-sans;
+    font-style: normal;
+    src: url(../font/open-sans/OpenSans-Regular.ttf) format("truetype");
+}
+@font-face{
+    font-family: open-sans-bold;
+    font-style: bold;
+    src: url(../font/open-sans/OpenSans-Bold.ttf) format("truetype");
+}
+@font-face{
+    font-family: open-sans-italic;
+    font-style: italic;
+    src: url(../font/open-sans/OpenSans-Italic.ttf) format("truetype");
+}
+@font-face{
+    font-family: open-sans-light;
+    font-style: light;
+    src: url(../font/open-sans/OpenSans-Light.ttf) format("truetype");
+}
+@font-face{
+    font-family: roboto;
+    font-style: normal;
+    src: url(../font/Roboto/Roboto/Roboto-Regular.ttf) format("truetype");
+}
+@font-face{
+    font-family: roboto-bold;
+    font-style: bold;
+    src: url(../font/Roboto/Roboto/Roboto-Bold.ttf) format("truetype");
+}
+@font-face{
+    font-family: roboto-italic;
+    font-style: italic;
+    src: url(../font/Roboto/Roboto/Roboto-Italic.ttf) format("truetype");
+}
+@font-face{
+    font-family: roboto-light;
+    font-style: light;
+    src: url(../font/Roboto/Roboto/Roboto-Light.ttf) format("truetype");
+}
+
+*{
+    font-family: roboto;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: open-sans, roboto, sans-serif;
+    color: var(--main-col);
+}
+
+h1{
+    font-size: var(--txt-sehr-gross);
+}
+
+h2{
+    font-size: var(--txt-gross);
+}
+
+h3{
+    font-size: var(--txt-mittel);
+}
+
+h4{
+    font-size: var(--txt-normal);
+}
+
+h5{
+    font-size: var(--txt-normal);
+}
+
+h6{
+    font-size: var(--txt-klein);
+}
+
+/* ---------------------- Fonts end ---------------------- */
+
+body{
+    height: 100vh; /* Damit Body den kompletten Display annimmt */
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 160px auto 50px;
+    grid-template-areas:
+    "page-head"
+    "page-main"
+    "page-footer";
+}
+
+img{
+    height: 100%!important;
+    width: 100%!important;
+}
+
+
+/* Mobile Sizing */
+@media screen and (max-width: 500px){
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px){
+
+}
