@@ -1,21 +1,29 @@
-// var productContainer = document.getElementsByClassName('product-container')
-
-
-// for (var i = 0; i < productContainer.length; i++) {
-//     productContainer[i].addEventListener('click', console.log("Test"));
-// }
-
-
-
 $(function() {
-    console.log( "ready!" );
 
-    var productContainer = $('.product-container')
+    /* Selectors */
+    var overlay = $('.overlay-products')
+    var productDescription = $('.product-description')
+    var productImg = $('.product-img')
+    var closeProductContainer = $('.product-description-close-btn')
 
-    productContainer.on( "click", function() {
-        // console.log( $( this ).text() );
-        $(this).next('.product-description').addClass('.active')
+    /* Clickevents */
+
+    /* Klick auf das Produktbild */
+    productImg.on( "click", function() {
+        jQuery(this).siblings(".product-description").toggle("fast")
+        overlay.toggle()
       });
 
-    console.log(productContainer)
+    /* Klick auf das Schliessen Icon */
+    closeProductContainer.on( "click", function() {
+        jQuery(this).parent().parent(".product-description").toggle("fast")
+        overlay.toggle("fast")
+    });
+
+    /* Dunkle Überlagerung */
+    overlay.on("click", function(){
+        overlay.toggle("fast")
+        $('.product-description:visible').toggle("fast")
+    });
+
 });

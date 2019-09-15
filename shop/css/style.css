@@ -101,6 +101,11 @@
     border: 1px lightgrey solid;
 }
 
+.product-img{
+    height: 100%;
+    width: 100%;
+}
+
 .product-description{
     position: absolute;
     top: 0;
@@ -263,10 +268,15 @@
     width: 50%;
 }
 
-/* .product-description{
+.product-description{
     display: none;
-} */
+}
 
-.active{
-    display: block!important;
+.overlay-products{
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.075);
+    height: 800px;
+    width: 1600px;
+    display: none;
 }
