@@ -1,4 +1,11 @@
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
 /* Header */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+
 :root{
     --header-height: 160px;
     --nav-width: 150px;
@@ -20,7 +27,6 @@
 }
 
 #logo{
-    /* height: 75px; */
     width: 385px;
     margin-left: 50px;
 }
@@ -43,7 +49,11 @@
 #search-product::placeholder {
     font-family: open-sans-italic;
     font-size: var(--txt-normal);
-  }
+}
+
+
+/* Page Nav */
+/* ==================================================================== */
 
 #page-main-nav{
     
@@ -57,6 +67,7 @@
 #page-main-nav > ul > li{
     height: var(--header-height);
     width: var(--nav-width);
+    transition-duration: 0.15s;
 }
 #page-main-nav > ul > li:hover{
     background-color: var(--main-col-light);
@@ -66,12 +77,32 @@
     color: var(--main-col);
 }
 
+/* Main Nav Images*/
+/* ==================================================================== */
+
 .nav-img{
-    height: 80%;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    margin-top: 20px;
 }
+
+.nav-img > svg{height: 100%;}
+.main-nav-svg-color{fill: var(--main-col-light);}
+.main-nav-svg-color-kontra{fill: var(--main-col);}
+
+#page-main-nav > ul > li:hover .main-nav-svg-color{
+    fill: var(--main-col);
+}
+
+#page-main-nav > ul > li:hover .main-nav-svg-color-kontra{
+    fill: var(--main-col-light);
+}
+
 .nav-title{
     text-align: center;
     height: 20%;
+    margin-top: 12px;
     font-family: open-sans-bold;
     font-size: 22px;
     letter-spacing: 1px;
@@ -79,18 +110,59 @@
     color: var(--main-col-light);
 }
 
+
+
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
 /* Page Main */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+
 #page-main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-/* Product Nav*/
+/* Product additional Nav */
+/* ==================================================================== */
+#additional-main-header{
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--header-height);
+    height: 90px;
+    width: 100%;
+}
+
+#additional-main-header-left{
+    height: 100%;
+    width: 300px;
+    background-color: var(--blue);
+}
+
+#additional-main-header-middle{
+    height: 100%;
+    width: 300px;
+    background-color: var(--blue);
+}
+
+#additional-main-header-right{
+    height: 100%;
+    width: 300px;
+    background-color: var(--blue);
+}
+
+/* Product Nav */
+/* ==================================================================== */
+
 #product-nav{
     position: fixed;
     z-index: 120;
-    margin-top: 20px;
+    margin-top: 280px;
     width: 1600px;
     display: flex;
     justify-content: space-between;
@@ -116,8 +188,10 @@
 }
 
 /* Product */
+/* ==================================================================== */
+
 #product-wrapper{
-    margin-top: 80px;
+    margin-top: 360px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -229,6 +303,7 @@
 }
 
 /* Product Description Links part*/
+/* ==================================================================== */
 
 .product-links{
     display: flex;

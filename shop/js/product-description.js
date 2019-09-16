@@ -18,6 +18,8 @@ $(function() {
         }
         jQuery(this).siblings(".product-description").toggle("fast")
         overlay.toggle()
+
+        /* Overlay höhe an Produktwrapper anpassen */
         overlay.height(productWrapper.height())
     });
 
