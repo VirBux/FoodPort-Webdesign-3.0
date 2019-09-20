@@ -110,42 +110,18 @@ h1, h2, h3, h4, h5, h6{
     color: var(--main-col);
 }
 
-h1{
-    font-size: var(--txt-sehr-gross);
-}
-
-h2{
-    font-size: var(--txt-gross);
-}
-
-h3{
-    font-size: var(--txt-mittel);
-}
-
-h4{
-    font-size: var(--txt-normal);
-}
-
-h5{
-    font-size: var(--txt-normal);
-}
-
-h6{
-    font-size: var(--txt-klein);
-}
+h1{font-size: var(--txt-sehr-gross);}
+h2{font-size: var(--txt-gross);}
+h3{font-size: var(--txt-mittel);}
+h4{font-size: var(--txt-normal);}
+h5{font-size: var(--txt-normal);}
+h6{font-size: var(--txt-klein);}
 
 /* ---------------------- Fonts end ---------------------- */
 
 body{
-    height: 100vh; /* Damit Body den kompletten Display annimmt */
+    min-height: 100vh; /* Damit Body den kompletten Display annimmt */
     max-width: 100vw;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 160px auto 50px;
-    grid-template-areas:
-    "page-head"
-    "page-main"
-    "page-footer";
 }
 
 img{

@@ -111,21 +111,6 @@
 }
 
 
-
-/* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
-/* Page Main */
-/* ==================================================================== */
-/* ==================================================================== */
-/* ==================================================================== */
-
-#page-main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 /* Product additional Nav */
 /* ==================================================================== */
 #additional-main-header{
@@ -138,30 +123,239 @@
     width: 100%;
 }
 
+/* Left part */
 #additional-main-header-left{
+    display: flex;
+    align-content: flex-start;
     height: 100%;
-    width: 300px;
-    background-color: var(--blue);
+    min-width: 300px;
 }
 
+.language-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 35px;
+    width: 150px;
+    margin-left: 10px;
+}
+
+#language{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    height: 35px;
+    width: 150px;
+    background-color: var(--main-col);
+}
+
+.language-img{
+    height: 30px;
+    width: 53px;
+}
+#language > h4{
+    padding: 0 4px;
+    color: var(--main-col-light)
+}
+.language-triangle{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 25px 0 25px;
+    border-color: var(--main-col) transparent transparent transparent;
+}
+#breadcrumb{
+    padding: 5px;
+    color: gray;
+}
+
+/* Middle Vendor part */
+/* ============================ Gerüst */
 #additional-main-header-middle{
-    height: 100%;
-    width: 300px;
+    margin-top: -50px;
+    height: 150px;
+    max-width: 800px;
+}
+    .total-vendor-header{
+        display: flex;
+        justify-content: center;
+        height: 50px;
+    }
+        .total-vendor-header header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--blue-light);
+            border-radius: 20px;
+            width: 220px;
+            height: 36px;
+        }
+
+        .total-vendor-header-line{
+            width: 34%;
+            margin-left: -5px;
+            margin-right: -5px;
+            height: 0;
+            border-bottom: 3px solid var(--blue-light);
+        }
+
+        #total-vendor-icon{
+            fill: var(--blue);
+        }
+
+        .total-vendor-img{
+            margin: 0 8px;
+            height: 28px;
+        }
+        .total-vendor-img > svg{
+            height: 100%;
+        }
+
+        .total-vendor-header h3{
+            color: var(--blue);
+            font-family: open-sans-bold;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+
+
+    #vendor-properties{
+        display: flex;
+        justify-content: center;
+    }
+
+/* ============================ Gerüst Ende */
+/* ============================ Inhalte */
+
+.vendor-properties-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 190px;
+    margin: 0 15px;
+}
+
+    .vendor-logo{
+        height: 35px;
+        width: 100%;
+        background-color: var(--blue-light);
+    }
+
+
+    .vendor-properties-container{
+        display: flex;
+        height: 30px;
+        width: 100%;
+    }
+    
+    :root{--vendor-prop-rad: 12px;} /* Passe den Radius hier an */
+
+        .vendor-properties-container > article{
+            width: 33.3%;
+            background-color: red;
+            border: white solid 1px;
+        }
+
+        .vendor-package-container{
+            border-radius: 0 0 0 var(--vendor-prop-rad);
+        }
+
+        .vendor-weight-container{
+
+        }
+
+        .vendor-cart-container{
+            border-radius: 0 0 var(--vendor-prop-rad) 0;
+        }
+
+
+    .vendor-price-container{
+        height: 27px;
+        width: 130px;
+        background-color: blue;
+        border-radius: 0 0 var(--vendor-prop-rad) var(--vendor-prop-rad);
+    }
+
+
+/* Right part */
+#additional-main-header-right{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    height: 40px;
+    width: 400px;
+}
+
+    #total-wrapper{
+        display: flex;
+        align-items: center;
+    }
+
+        #total-wrapper > p{
+            margin-right: 5px;
+            font-family: roboto-italic;
+            color: var(--main-col);
+        }
+
+        .total-container{
+            display: flex;
+            align-items: center;
+            background-color: var(--main-col-light);
+            border: 1px var(--main-col) solid;
+            color: var(--main-col);
+            margin: 0 5px;
+            height: 40px;
+        }
+
+            .total-container > data{
+                margin: 0 2px;
+            }
+
+            .total-container > picture{
+                margin: 0 2px;
+            }
+
+/* Fixed Aside */
+/* ==================================================================== */
+
+/* Vendor Filter left */
+#vendor-filter{
+    position: fixed;
+    display: flex;
+    z-index: 50;
+    align-items: center;
+    top: 40%;
+    left: 0;
+    height: 170px;
+    width: 50px;
+    border-radius: 0 20px 20px 0;
     background-color: var(--blue);
 }
 
-#additional-main-header-right{
-    height: 100%;
-    width: 300px;
-    background-color: var(--blue);
+    #vendor-filter > h3{
+        color: var(--blue-light);
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+    }
+
+
+/* Medias right */
+#media{
+    position: fixed;
+    z-index: 50;
+    top: 38%;
+    right: 0;
+    height: 200px;
+    width: 60px;
+    background-color: blue;
 }
+
 
 /* Product Nav */
 /* ==================================================================== */
 
 #product-nav{
-    position: fixed;
-    z-index: 120;
+    z-index: 80;
     margin-top: 280px;
     width: 1600px;
     display: flex;
@@ -169,34 +363,50 @@
     background-color: lightblue;
 }
 
-.category-container{
-    display: flex;
-    width: 450px;
-    background-color: lightgreen;
-}
+    .category-container{
+        display: flex;
+        width: 450px;
+        background-color: lightgreen;
+    }
 
-#infoblock{
-    width: 500px;
-    height: 40px;
-    background-color: lightgreen;
-}
+    #infoblock{
+        width: 500px;
+        height: 40px;
+        background-color: lightgreen;
+    }
 
-.fast-filter-container{
+    .fast-filter-container{
+        display: flex;
+        width: 450px;
+        background-color: lightgreen;
+    }
+
+
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* Page Main */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+
+#page-main{
+    height: ;
     display: flex;
-    width: 450px;
-    background-color: lightgreen;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* Product */
 /* ==================================================================== */
 
 #product-wrapper{
-    margin-top: 360px;
+    height: 100%;
+    margin: 30px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 1600px;
-    background-color: ;
 }
 
 .product-container{
@@ -407,4 +617,17 @@
     height: 100%;
     width: 100vw;
     display: none;
+}
+
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* Footer */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+
+#page-footer{
+    height: 400px;
+    background-color: #1C1C1C;
 }

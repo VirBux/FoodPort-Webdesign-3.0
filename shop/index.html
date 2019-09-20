@@ -10,7 +10,8 @@
 	<script src="js/load-products.js"></script>
     <script src="js/librarys/jquery-3.4.1.min.js"></script>
 </head>
-<body onload="ajax_get('js/products.json')">
+<body>
+<!-- <body onload="ajax_get('js/products.json')"> -->
 <!-- =============================================== -->
 <!-- ================= Page Header ================= -->
 <!-- =============================================== -->
@@ -149,63 +150,192 @@
         </nav>
     </header>
 
+
+    <!-- ================= Additional header ================================ -->
     <!-- ================= Page Main Nav Shopinginformation ================= -->
     <header id="additional-main-header">
 
         <!-- ================= Language & Breadcrumb ================= -->
         <section id="additional-main-header-left">
-            <div id="language">
-                <div class="language-img"><img src="" alt=""></div>
-                <h3 class="language-txt"><!-- SQL --></h3>
+            <div class="language-wrapper">
+                <div id="language">
+                    <picture class="language-img">
+                        <img src="img/Germany.png" alt="">
+                    </picture>
+                    <h4 class="language-txt"><!-- SQL -->Deutsch</h4>
+                </div>
+                <div class="language-triangle"></div>
             </div>
-            <div id="breadcrumb"><!-- SQL --></div>
+            <div id="breadcrumb"><!-- SQL -->Home/Shop</div>
         </section>
 
         <!-- ================= Shopping Vendor Information ================= -->
         <section id="additional-main-header-middle">
             <div class="total-vendor-container">
-                <div class="vendor-img"><img src="" alt=""></div>
 
-                <div class="vendor-properties-container">
+                <header class="total-vendor-header">
+                    <figure class="total-vendor-header-line"></figure>
+                    <header>
+                        <picture class="total-vendor-img">
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                            <svg version="1.1" id="total-vendor-icon" class="vendor-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                    y="0px" viewBox="0 0 464.1 484.7" style="enable-background:new 0 0 464.1 484.7;" xml:space="preserve">
+                            <path id="vendor-icon-stand" d="M440.8,438H431V195.8l0,0c-12.1,0-23.5-3.9-33-10.6c-6.4,4.5-13.8,7.8-22,9.5
+                                c-3.7,0.7-7.6,1.1-11.3,1.1c-2.5,0-4.9-0.3-7.4-0.6v180.2c0,10.3-8.3,18.6-18.6,18.6h-66.9v-51l23.6,39.4c2.8,4.7,7.7,7.2,12.8,7.2
+                                c2.6,0,5.2-0.7,7.6-2.1c7-4.2,9.3-13.4,5.1-20.4l-47.4-79.2c-2.9-4.9-8.3-7.3-13.6-7c-0.4,0-55,0-55.3,0c-5.4-0.4-10.8,2.1-13.8,7.1
+                                l-47.4,79.2c-4.2,7.1-1.9,16.2,5.1,20.4c2.4,1.4,5,2.1,7.6,2.1c5.1,0,10-2.6,12.8-7.2l23.7-39.6V394h-67.1
+                                c-10.3,0-18.6-8.3-18.6-18.6V195.2c-2.4,0.3-4.9,0.6-7.4,0.6c-3.7,0-7.6-0.4-11.4-1.1c-8.2-1.6-15.5-5-21.9-9.5
+                                c-9.5,6.6-21,10.6-33,10.6l0,0V438h-9.8C10.4,438,0,448.5,0,461.3c0,12.9,10.4,23.3,23.3,23.3h417.5c12.9,0,23.3-10.4,23.3-23.3
+                                C464.1,448.5,453.7,438,440.8,438z"/>
+                            <path id="vendor-icon-kopf" d="M232.1,197.2c-17.1,0-31,15.9-31,35.5s13.9,35.5,31,35.5s31-15.9,31-35.5S249.2,197.2,232.1,197.2z"
+                                />
+                            <path id="vendor-icon-dach" d="M23.7,169.6c3.2,0.9,6.4,1.4,9.5,1.4c14.3,0,27.5-9.3,31.7-23.7l1.7-5.8c1.6,14,11.8,26,26.3,28.9
+                                c2.2,0.4,4.4,0.6,6.5,0.6c15.5,0,29.3-10.9,32.5-26.7l0.8-4.1c1.1,15.8,13.4,29,29.7,30.6c1.1,0.1,2.2,0.2,3.3,0.2
+                                c16.8,0,31.2-12.8,32.9-29.9l0.2-2.5c0.5,17.9,15,32.3,33.1,32.3c18,0,32.6-14.4,33.1-32.3l0.2,2.5c1.7,17.1,16.1,29.9,32.9,29.9
+                                c1.1,0,2.2,0,3.3-0.2c16.3-1.6,28.6-14.8,29.7-30.6l0.8,4.1c3.1,15.8,17,26.7,32.5,26.7c2.1,0,4.3-0.2,6.5-0.6
+                                c14.5-2.9,24.8-14.9,26.3-28.9l1.7,5.8c4.3,14.4,17.5,23.7,31.7,23.7c3.1,0,6.3-0.5,9.5-1.4c17.5-5.2,27.5-23.7,22.3-41.3
+                                L432.8,28.2C427.8,11.4,412.5,0,395,0H69.1C51.7,0,36.3,11.4,31.3,28.2L1.4,128.3C-3.8,145.8,6.1,164.3,23.7,169.6z"/>
+                            </svg>
+                        </picture>
+                        <h3>Ihre Händler</h3>
+                    </header>
+                    <figure class="total-vendor-header-line"></figure>
+                </header>
+                
+                <main id="vendor-properties">
 
-                    <div class="vendor-package-container">
-                        <h3 class="vendor-package-qty"><!-- SQL --></h3>
-                        <div class="vendor-package-img"><img src="" alt=""></div>
-                    </div>
+                    <!-- Vendor 1 -->
+                    <section class="vendor-properties-wrapper">
 
-                    <div class="vendor-weight-container">
-                        <h3 class="vendor-weight-qty"><!-- SQL --></h3>
-                        <div class="vendor-weight-img"><img src="" alt=""></div>
-                    </div>
+                        <div class="vendor-logo">
+                            <picture class="vendor-logo-img">
+                                <img src="" alt="">
+                            </picture>
+                        </div>
 
-                    <div class="vendor-cart-container">
-                        <h3 class="vendor-cart-qty"><!-- SQL --></h3>
-                        <div class="vendor-cart-img"><img src="" alt=""></div>
-                    </div>
+                        <div class="vendor-properties-container">
 
-                </div>
+                            <article class="vendor-package-container">
+                                <data class="vendor-package-qty"><!-- SQL --></data>
+                                <picture class="vendor-package-img"><img src="" alt=""></picture>
+                            </article>
+
+                            <article class="vendor-weight-container">
+                                <data class="vendor-weight-qty"><!-- SQL --></data>
+                                <picture class="vendor-weight-img"><img src="" alt=""></picture>
+                            </article>
+
+                            <article class="vendor-cart-container">
+                                <data class="vendor-cart-qty"><!-- SQL --></data>
+                                <picture class="vendor-cart-img"><img src="" alt=""></picture>
+                            </article>
+
+                        </div>
+
+                        <div class="vendor-price-container">
+                            <picture class="vendor-price-img">
+                                <img src="" alt="">
+                            </picture>
+                            <data class="vendor-price"></data>
+                        </div>
+
+                    </section>
+
+                    <!-- Vendor 2 -->
+                    <section class="vendor-properties-wrapper">
+
+                        <div class="vendor-logo">
+                            <picture class="vendor-logo-img">
+                                <img src="" alt="">
+                            </picture>
+                        </div>
+
+                        <div class="vendor-properties-container">
+
+                            <article class="vendor-package-container">
+                                <data class="vendor-package-qty"><!-- SQL --></data>
+                                <picture class="vendor-package-img"><img src="" alt=""></picture>
+                            </article>
+
+                            <article class="vendor-weight-container">
+                                <data class="vendor-weight-qty"><!-- SQL --></data>
+                                <picture class="vendor-weight-img"><img src="" alt=""></picture>
+                            </article>
+
+                            <article class="vendor-cart-container">
+                                <data class="vendor-cart-qty"><!-- SQL --></data>
+                                <picture class="vendor-cart-img"><img src="" alt=""></picture>
+                            </article>
+                            
+                        </div>
+
+                        <div class="vendor-price-container">
+                            <picture class="vendor-price-img">
+                                <img src="" alt="">
+                            </picture>
+                            <data class="vendor-price"></data>
+                        </div>
+
+                    </section>
+
+                    <!-- Vendor 3 -->
+                    <section class="vendor-properties-wrapper">
+                        <div class="vendor-logo">
+                            <picture class="vendor-logo-img">
+                                <img src="" alt="">
+                            </picture>
+                        </div>
+
+                        <div class="vendor-properties-container">
+                            <article class="vendor-package-container">
+                                <data class="vendor-package-qty"><!-- SQL --></data>
+                                <picture class="vendor-package-img"><img src="" alt=""></picture>
+                            </article>
+
+                            <article class="vendor-weight-container">
+                                <data class="vendor-weight-qty"><!-- SQL --></data>
+                                <picture class="vendor-weight-img"><img src="" alt=""></picture>
+                            </article>
+
+                            <article class="vendor-cart-container">
+                                <data class="vendor-cart-qty"><!-- SQL --></data>
+                                <picture class="vendor-cart-img"><img src="" alt=""></picture>
+                            </article>
+                        </div>
+
+                        <div class="vendor-price-container">
+                            <picture class="vendor-price-img">
+                                <img src="" alt="">
+                            </picture>
+                            <data class="vendor-price"></data>
+                        </div>
+
+                    </section>
+
+                </main>
 
             </div>
         </section>
 
         <!-- ================= Shopping Total Information ================= -->
         <section id="additional-main-header-right">
-            <div id="total-container">
+            <div id="total-wrapper">
                 <p>Total:</p>
 
-                <div id="total-package-container">
-                    <h3 id="total-package-qty"><!-- SQL --></h3>
-                    <div id="total-package-img" class="total-img"><img src="" alt=""></div>
+                <div id="total-package-container" class="total-container">
+                    <data id="total-package-qty"><!-- SQL -->Package</data>
+                    <picture id="total-package-img" class="total-img">img<img src="" alt=""></picture>
                 </div>
 
-                <div id="total-weight-container">
-                    <h3 id="total-weight-qty"><!-- SQL --></h3>
-                    <div id="total-weight-img" class="total-img"><img src="" alt=""></div>
+                <div id="total-weight-container" class="total-container">
+                    <data id="total-weight-qty"><!-- SQL -->Weight</data>
+                    <picture id="total-weight-img" class="total-img">img<img src="" alt=""></picture>
                 </div>
 
-                <div id="total-price-container">
-                    <h3 id="total-price-qty"><!-- SQL --></h3>
-                    <div id="total-price-img" class="total-img"><img src="" alt=""></div>
+                <div id="total-price-container" class="total-container">
+                    <data id="total-price-qty"><!-- SQL -->Price</data>
+                    <picture id="total-price-img" class="total-img">img<img src="" alt=""></picture>
                 </div>
                 
             </div>
@@ -217,12 +347,17 @@
 <!-- ============================================= -->
     <main id="page-main">
 
-        <aside id="vendor-filter"></aside>
+        <aside id="vendor-filter">
+            <h3>Händler Filter</h3>
+            <div class="open-btn"></div>
+        </aside>
+
         <aside id="media">
             <article id="recipes"></article>
             <article id="blog"></article>
             <article id="video"></article>
         </aside>   
+
         <nav id="product-nav">
             <div class="category-container">
                 <h3>Kategorie</h3>
@@ -236,6 +371,10 @@
                 
             </div>
         </nav> 
+
+    <!-- ================================================== -->
+    <!-- ================= Productwrapper ================= -->
+    <!-- ================================================== -->
 
         <section id="product-wrapper">
 
@@ -2652,9 +2791,9 @@
 <!-- =============================================== -->
 <!-- ================= Page Footer ================= -->
 <!-- =============================================== -->
-    <footer id="page-footer">
+<footer id="page-footer">
 
-    </footer>
+</footer>
 
     <script src="js/product-description.js"></script>
 </body>
