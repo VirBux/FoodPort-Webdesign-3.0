@@ -24,7 +24,7 @@ var jsonrow = 2500;
 
 function displayData(data){
 
-	offset = 8;
+	offset = 16;
 	jsonrow = jsonrow + loadedProducts
 
 	
@@ -33,6 +33,7 @@ function displayData(data){
 
 	for(var i = jsonrow; i < jsonrow+offset; i++){
 		
+		loadedProducts++;
 		
 		//Create div for Product
 		var divProduct = document.createElement("div");
@@ -298,7 +299,15 @@ function displayData(data){
 		buttonAddToCart.setAttribute("class", "product-add-cart-btn");
 		buttonAddToCart.innerHTML = "Hinzufügen";
 		
-		console.log("loading elements");
+		
+		
+		
+		//Update loaded images
+		var loadedProductText = document.getElementById("products-loaded");
+		loadedProductText.innerHTML= "Loaded "+loadedProducts+" From 3000 Products";
+		
+		
+		
 		
 		
 		//Appending elements
