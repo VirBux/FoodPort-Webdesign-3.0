@@ -3,7 +3,7 @@ function ajax_get(url) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            //console.log('responseText:' + xmlhttp.responseText);
+            console.log('responseText:' + xmlhttp.responseText);
             try {
                 data = JSON.parse(xmlhttp.responseText);
 				displayData(data);
@@ -18,13 +18,21 @@ function ajax_get(url) {
     xmlhttp.send();
 }
 
+var offset = 0;
+var loadedProducts = 0;
+var jsonrow = 2500;
 
 function displayData(data){
+
+	offset = 8;
+	jsonrow = jsonrow + loadedProducts
+
 	
 	//Gets the wrapper of all products
 	var divWrapper = document.getElementById("product-wrapper");
 
-	for(var i = 0; i < 3000; i++){
+	for(var i = jsonrow; i < jsonrow+offset; i++){
+		
 		
 		//Create div for Product
 		var divProduct = document.createElement("div");
@@ -34,16 +42,12 @@ function displayData(data){
 		//Create div for Image
 		var divImage = document.createElement("div");
 		//Assign Classname and content
-		divImage.setAttribute("class", "class="product-img-wrapper"");
+		divImage.setAttribute("class", "product-img");
 		
-		//Create img for Products within class="product-img-wrapper" element
+		//Create img for Products within product-img element
 		var productImage = document.createElement("img");
+		productImage.setAttribute("src", data.Tabelle1[i].ImageUrl);
 		productImage.setAttribute("alt", "");
-		if(data.Tabelle1[i].ImageUrl == null){
-			productImage.setAttribute("src", "https://foodport.ch/wp-content/uploads/2019/09/Kein_Bild.jpg");
-		}else{
-			productImage.setAttribute("src", data.Tabelle1[i].ImageUrl);
-		}
 		
 		//Create article for product
 		var articleProduct = document.createElement("article");
@@ -376,7 +380,6 @@ function displayData(data){
 		*/
 		
 	}
-
 
 }
 
