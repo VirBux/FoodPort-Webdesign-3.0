@@ -34,9 +34,9 @@ function displayData(data){
 		//Create div for Image
 		var divImage = document.createElement("div");
 		//Assign Classname and content
-		divImage.setAttribute("class", "product-img");
+		divImage.setAttribute("class", "class="product-img-wrapper"");
 		
-		//Create img for Products within product-img element
+		//Create img for Products within class="product-img-wrapper" element
 		var productImage = document.createElement("img");
 		productImage.setAttribute("alt", "");
 		if(data.Tabelle1[i].ImageUrl == null){

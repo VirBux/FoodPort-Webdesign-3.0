@@ -20,7 +20,8 @@ $(function() {
         overlay.toggle()
 
         /* Overlay höhe an Produktwrapper anpassen */
-        overlay.height(productWrapper.height())
+        var overlayHeight = overlay.height() + 150;
+        overlay.height(overlayHeight)
     });
 
     /* Klick auf das Schliessen Icon */
