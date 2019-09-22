@@ -304,7 +304,7 @@ function displayData(data){
 		
 		//Update loaded images
 		var loadedProductText = document.getElementById("products-loaded");
-		loadedProductText.innerHTML= "Loaded "+loadedProducts+" From 3000 Products";
+		loadedProductText.innerHTML= "Loaded "+(loadedProducts+32)+" From 3000 Products";
 		
 		
 		
