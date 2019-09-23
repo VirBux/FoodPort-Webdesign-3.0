@@ -195,7 +195,7 @@ img{
     background-color: var(--main-col);
     color: #fff;
     text-align: center;
-    padding: 5px 0;
+    padding: 5px 5px;
     border-radius: 6px;
   
     /* Position the tooltip text */
@@ -227,6 +227,61 @@ img{
     visibility: visible;
     opacity: 1;
   }
+
+/* no down side */
+
+  /* Tooltip text */
+  .tooltip .tooltiptext-down {
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--main-col);
+    color: #fff;
+    text-align: center;
+    padding: 5px 5px;
+    border-radius: 6px;
+  
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    margin-left: -60px;
+  
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Tooltip arrow */
+  .tooltip .tooltiptext-down::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--main-col) transparent;
+  }
+
+  .tooltip:hover .tooltiptext-down {
+    visibility: visible;
+    opacity: 1;
+  }
+
+/* Shadows */
+
+.green-shadow{
+  -webkit-box-shadow: 0px 4px 10px -2px rgba(11,142,54,1);
+  -moz-box-shadow: 0px 4px 10px -2px rgba(11,142,54,1);
+  box-shadow: 0px 4px 10px -2px rgba(11,142,54,1);
+}
+
+.blue-shadow{
+  -webkit-box-shadow: 0px 4px 10px -2px rgba(14,94,121,1);
+  -moz-box-shadow: 0px 4px 10px -2px rgba(14,94,121,1);
+  box-shadow: 0px 4px 10px -2px rgba(14,94,121,1);
+}
 
 
 /* Mobile Sizing */

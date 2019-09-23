@@ -2,10 +2,8 @@ $(function() {
     /* Selectors */
     var body = $('body')
     var overlay = $('.overlay-products')
-    var productWrapper = $('#product-wrapper')
-    var productDescription = $('.product-description')
     var productImg = $('.product-img')
-    var closeProductContainer = $('.product-description-close-btn')
+    // var vendorfilter = $('')
 
     /* Clickevents */
 
