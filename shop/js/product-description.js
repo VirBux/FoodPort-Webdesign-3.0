@@ -24,6 +24,7 @@ $(function() {
 
     /* Klick auf das Schliessen Icon */
     body.on( "click", '.product-description-close-btn', function() {
+        productImg = $('.product-img')
         productImg.removeClass("img-selected")
         jQuery(this).parent().parent(".product-description").toggle("fast")
         overlay.toggle("fast")
