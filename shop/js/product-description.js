@@ -11,10 +11,8 @@ $(function() {
     body.on( "click",'.product-img', function() {
         if(jQuery(this).siblings(".product-description").is(":visible")){
             jQuery(this).removeClass('img-selected')
-			console.log("clicked1");
-        }else {
+        }else{
             jQuery(this).addClass('img-selected')
-			console.log("clicked2");
         }
         jQuery(this).siblings(".product-description").toggle("fast")
         overlay.toggle()
@@ -26,7 +24,6 @@ $(function() {
 
     /* Klick auf das Schliessen Icon */
     body.on( "click", '.product-description-close-btn', function() {
-        productImg = $('.product-img')
         productImg.removeClass("img-selected")
         jQuery(this).parent().parent(".product-description").toggle("fast")
         overlay.toggle("fast")

@@ -314,7 +314,7 @@ function displayData(data){
 		divWrapper.appendChild(divProduct);
 		divProduct.appendChild(divImage);
 		divImage.appendChild(productImage);
-		divProduct.appendChild(articleProduct);
+		divImage.appendChild(articleProduct);
 		
 		articleProduct.appendChild(headerProduct);
 		headerProduct.appendChild(divProductVendor);
