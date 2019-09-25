@@ -947,8 +947,50 @@
 /* ==================================================================== */
 
 #page-footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
     position: relative;
     z-index: 91;
-    height: 400px;
     background-color: #1C1C1C;
+    color: var(--main-col-light);
 }
+
+    #page-footer a,
+    #page-footer ul li{
+        color: var(--main-col-light);
+        font-size: var(--txt-mittel);
+        font-family: open-sans-bold;
+        transition-duration: 0.2s;
+    }#page-footer a:hover{
+        color: var(--main-col);
+    }
+
+    #page-footer > section{
+        
+    }
+
+        #page-footer > section > h2{
+            color: var(--main-col-light);
+            font-size: var(--txt-sehr-gross);
+            margin-bottom: 20px;
+        }
+
+        .newsletter-container > h3{
+            color: var(--main-col-light);
+        }
+
+        #page-footer > section > ul{
+
+        }
+
+            #page-footer > section > ul > li{
+                transform-origin: left;
+                transition-duration: 0.2s;
+            }
+
+            #page-footer > section > ul > li:hover{
+                transform: scale(1.2);
+            }
+
+        
