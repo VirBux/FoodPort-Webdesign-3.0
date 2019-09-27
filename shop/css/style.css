@@ -1,3 +1,22 @@
+/* Standarts */
+
+:root{
+    --header-height: 160px;
+    --nav-width: 150px;
+}
+
+#page-header{                   z-index: 100    }
+#additional-main-header{        z-index: 100    }
+#vendor-filter{                 z-index: 30     }
+#media{                         z-index: 30     }
+.img-selected{                  z-index: 40     }
+.product-description{           z-index: 40     }
+#page-footer{                   z-index: 25     }
+.overlay-products{              z-index: 20     }
+#product-nav{                   z-index: 15     }
+.product-price-container{       z-index: 15     }
+.product-img:hover{             z-index: 5      }
+
 /* ==================================================================== */
 /* ==================================================================== */
 /* ==================================================================== */
@@ -6,20 +25,15 @@
 /* ==================================================================== */
 /* ==================================================================== */
 
-:root{
-    --header-height: 160px;
-    --nav-width: 150px;
-}
-
 #page-header{
     position: fixed;
-    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: var(--header-height);
     width: 100%;
     background-color: var(--main-col);
+    transition-duration: 0.4s;
 
     -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
@@ -29,6 +43,7 @@
 #logo{
     width: 385px;
     margin-left: 50px;
+    transition-duration: 0.4s;
 }
 
 /*FoodPort Logo*/
@@ -44,7 +59,14 @@
     font-size: var(--txt-mittel);
     color: var(--main-col);
     padding: 5px;
+    border: var(--main-col-light) solid 4px;
+    border-radius: 20px;
 }
+
+    .search-icon{
+        position: relative;
+        right: 50px;
+    }
 
 #search-product::placeholder {
     font-family: open-sans-italic;
@@ -83,7 +105,7 @@
 .nav-img{
     display: flex;
     justify-content: center;
-    height: 80px;
+    height: 50%;
     margin-top: 20px;
 }
 
@@ -120,12 +142,12 @@
 
 #additional-main-header{
     position: fixed;
-    z-index: 100;
     display: flex;
     justify-content: space-between;
     margin-top: var(--header-height);
     height: 90px;
     width: 100%;
+    transition-duration: 0.4s;
 }
 
 /* Left part */
@@ -177,14 +199,14 @@
 /* Middle Vendor part */
 /* ============================ Gerüst */
 #additional-main-header-middle{
-    margin-top: -50px;
+    margin-top: -45px;
     height: 150px;
     max-width: 800px;
 }
     .total-vendor-header{
         display: flex;
         justify-content: center;
-        height: 50px;
+        height: 45px;
     }
         .total-vendor-header header{
             display: flex;
@@ -276,16 +298,13 @@
             color: var(--blue-light);
         }
 
-        .vendor-properties-container > article > data{
+        .vendor-properties-container > article > data{margin-right: -3px;}
 
-        }
+        .vendor-package-qty::after{content: "x"}
+        .vendor-cart-qty::after{content: "x"}
 
         .vendor-package-container{
             border-radius: 0 0 0 var(--vendor-prop-rad);
-        }
-
-        .vendor-weight-container{
-
         }
 
         .vendor-cart-container{
@@ -318,7 +337,6 @@
         border-radius: 0 0 var(--vendor-prop-rad) var(--vendor-prop-rad);
         color: var(--blue-light);
     }
-
 
 /* Right part */
 #additional-main-header-right{
@@ -357,6 +375,8 @@
                 font-size: 20px;
             }
 
+            #total-package-qty::after{content: "x";}
+
             .total-container > picture{
                 height: 80%;
                 margin: 0 2px;
@@ -388,7 +408,6 @@
 #vendor-filter{
     position: fixed;
     display: flex;
-    z-index: 95;
     align-items: center;
     top: 40%;
     left: 0;
@@ -408,7 +427,6 @@
 /* Medias right */
 #media{
     position: fixed;
-    z-index: 95;
     top: 38%;
     right: 0;
     width: 60px;
@@ -441,7 +459,6 @@
 /* ==================================================================== */
 
 #product-nav{
-    z-index: 80;
     margin-top: 280px;
     width: 1600px;
     display: flex;
@@ -492,7 +509,13 @@
         }
 
         .fast-filter > picture{
+            height: 55%;
             margin: 0 6px;
+        }
+
+        .fast-filter > picture > svg{
+            height: 100%;
+            fill: var(--main-col);
         }
 
         
@@ -513,7 +536,6 @@
     position: absolute;
     margin-top: -190px;
     left: 0;
-    z-index: 90;
     background-color: rgba(0, 0, 0, 0.2);
     height: calc(100% + 190px);
     width: 100vw;
@@ -523,12 +545,10 @@
     .product-container{
         position: relative;
         width: 200px;
-        
     }
 
         .product-vendor{
             height: 30px;
-            display: ;
         }
 
         .product-img{
@@ -537,16 +557,15 @@
             width: 200px;
             background-color: white;
         }.product-img:hover{
-            z-index: 29;
             transform: scale(1.2);
             border: 2px var(--main-col) solid;
             cursor: pointer;
             transition-duration: 0.2s;
-        }
+            z-index: 30;
+        }.product-img:hover .product-flag-img{visibility: hidden;}
 
         .img-selected{
             transform: scale(1.5) translateX(-32px) translateY(32px)!important;
-            z-index: 95;
             border: 2px var(--main-col) solid;
             border-radius: 20px;
         }
@@ -568,18 +587,45 @@
         .product-price-container{
             display: flex;
             justify-content: center;
-            width: 100%;
             position: absolute;
-            z-index: 5;
+            left: 50%;
+            transform: translateX(-50%);
             bottom: 5px;
+            height: 20px;
+            /* padding: 1px 3px; */
+            color: var(--main-col);
+            background-color: rgba(255, 255, 255, 0.75);
+            border: 1px solid var(--main-col);
+            border-radius: 20px;
         }
 
-            .product-price-container > picture{
+            
 
+            .product-price-label-img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 15px;
+                background-color: var(--main-col);
+                padding-left: 1px;
+                border-radius: 20px 0 0 20px;
             }
 
-            .product-price-container > data{
+                .product-price-label-img > picture{
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                }
 
+                .product-price-label-img > picture > svg{
+                    height: 80%;
+                    fill: white;
+                }
+
+            .product-price-container > data{
+                padding-right: 4px;
+                padding-left: 1px;
             }
 
     .product-description{
@@ -590,7 +636,6 @@
         border: 2px var(--main-col) solid;
         border-radius: 15px;
         background-color: white;
-        z-index: 95;
         display: none;
     }
 
@@ -951,7 +996,6 @@
     justify-content: space-around;
     padding: 30px 0;
     position: relative;
-    z-index: 91;
     background-color: #1C1C1C;
     color: var(--main-col-light);
 }

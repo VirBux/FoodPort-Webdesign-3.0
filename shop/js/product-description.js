@@ -47,4 +47,39 @@ $(function() {
     function renderevents(e){
         $('#infoblock').html(e.currentTarget.children[1].children[1].children[0].innerText)
     }
+
+    /* Filter */
+    var fastFilterPriceBox = $('#price-checkbox');
+    var fastFilterOriginBox = $('#origin-checkbox');
+    var fastFilterVendorBox = $('#vendor-checkbox');
+
+    var productVendorImg = $('.product-vendor');
+    var productFlag = $('.product-flag-img')
+    var productPrice = $('.product-price-container')
+
+    
+    if (!fastFilterPriceBox.is(':checked')) {
+        productPrice.toggle()
+    }
+
+    if (!fastFilterOriginBox.is(':checked')) {
+        productFlag.toggle()
+    }
+
+    if (!fastFilterVendorBox.is(':checked')) {
+        productVendorImg.toggle()
+    }
+
+    fastFilterVendorBox.change(function(){
+        productVendorImg.toggle()
+    });
+
+    fastFilterOriginBox.change(function(){
+        productFlag.toggle()
+    });
+
+    fastFilterPriceBox.change(function(){
+        productPrice.toggle()
+    });
+
 });
