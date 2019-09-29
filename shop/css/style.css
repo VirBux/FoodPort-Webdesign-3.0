@@ -42,7 +42,7 @@
 
 #logo{
     width: 385px;
-    margin-left: 50px;
+    margin: 0 50px;
     transition-duration: 0.4s;
 }
 
@@ -51,8 +51,13 @@
     fill: var(--main-col-light);
 }
 
-#search-product{
+#search-product-container{
+    display: flex;
     width: 480px;
+}
+
+#search-product{
+    width: 100%;
     height: 48px;
     background-color: white;
     font-family: open-sans;
@@ -65,7 +70,8 @@
 
     .search-icon{
         position: relative;
-        right: 50px;
+        right: 30px;
+        top: 10px;
     }
 
 #search-product::placeholder {
@@ -77,9 +83,7 @@
 /* Page Nav */
 /* ==================================================================== */
 
-#page-main-nav{
-    
-}
+#page-main-nav{}
 
 #page-main-nav > ul{
     display: flex;
@@ -132,6 +136,18 @@
     color: var(--main-col-light);
 }
 
+/* Page Nav Javascript push*/
+/* ==================================================================== */
+
+.push-main-nav .nav-img{
+    margin-top: 7px;
+}
+
+.push-main-nav .nav-title{
+    margin-top: 5px;
+    font-size: 18px;
+}
+
 /* ==================================================================== */
 /* ==================================================================== */
 /* ==================================================================== */
@@ -155,7 +171,7 @@
     display: flex;
     align-content: flex-start;
     height: 100%;
-    min-width: 300px;
+    width: 280px;
 }
 
 .language-wrapper{
@@ -171,8 +187,8 @@
     display: flex;
     justify-content: space-around;
     align-content: center;
-    height: 35px;
-    width: 150px;
+    height: 100%;
+    width: 100%;
     background-color: var(--main-col);
 }
 
@@ -199,38 +215,58 @@
 /* Middle Vendor part */
 /* ============================ Gerüst */
 #additional-main-header-middle{
-    margin-top: -45px;
+    margin-top: var(--mid-header-margin-top);
     height: 150px;
     max-width: 800px;
-}
+    /* min-width: 280px; */
+}:root{--mid-header-margin-top: -26px;}
+
     .total-vendor-header{
-        display: flex;
-        justify-content: center;
-        height: 45px;
+        height: 26px;
     }
         .total-vendor-header header{
+            position: relative;
+            z-index: 3;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: var(--blue-light);
             border-radius: 20px;
             width: 220px;
-            height: 36px;
+            height: 100%;
+            margin-top: -36px;
+        }
+
+        .additional-head-background{
+            position: relative;
+            top: 0px;
+            width: 100%;
+            height: 26px;
+            border-radius: 0 0 20px 20px;
         }
 
         .total-vendor-header-line{
-            width: 34%;
-            margin-left: -5px;
-            margin-right: -5px;
+            position: relative;
+            z-index: 2;
+            left: 50%;
+            bottom: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            width: 89%;
             height: 0;
             border-bottom: 3px solid var(--blue-light);
         }
+            @media (max-width: 1750px){.total-vendor-header-line{width: 70%;}}
+            @media (max-width: 1600px){.total-vendor-header-line{width: 60%;}}
+            @media (max-width: 1500px){.total-vendor-header-line{display: none}}
 
         #total-vendor-icon{fill: var(--blue);}
 
         .total-vendor-img{
             margin: 0 8px;
-            height: 28px;
+            height: 22px;
         }
         .total-vendor-img > svg{
             height: 100%;
@@ -344,7 +380,7 @@
     justify-content: flex-end;
     margin-right: 20px;
     height: 40px;
-    width: 400px;
+    min-width: 370px;
 }
 
     #total-wrapper{
@@ -1037,4 +1073,95 @@
                 transform: scale(1.2);
             }
 
-        
+
+
+
+                    /* ==================================================================== */
+                    /* ==================================================================== */
+                    /* ==================================================================== */
+                    /* ====================== M E D I A  Q U E R Y S ====================== */
+                    /* ==================================================================== */
+                    /* ==================================================================== */
+                    /* ==================================================================== */
+
+
+
+@media (max-width: 1400px){
+
+    :root{
+        --header-height: 120px;
+        --nav-width: 120px;
+    }
+
+    #search-product-container{
+        margin-bottom: 20px;
+    }
+
+
+    .nav-img{
+        margin-top: 15px;
+    }
+
+    #page-main-nav > ul > li >.nav-title{
+        font-size: 18px;
+    }
+
+
+    /* Additional main Header */
+    /* Left part language */
+    #additional-main-header-left{
+        min-width: 150px;
+    }
+
+    .language-wrapper{
+        height: 28px;
+        width: 120px;
+    }
+
+    .language-img{
+        height: 20px;
+        width: 30px;
+    }
+
+    #breadcrumb{
+    display: none;
+    }
+
+
+
+    #infoblock{display: none}
+    #product-nav{
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* Header neu formatieren*/
+
+@media (max-width: 1200px){
+
+    .total-vendor-header-line{display: none}
+
+    #logo{
+        display: none;
+    }
+}
+
+@media (max-width: 1024px){
+
+
+}
+
+@media (max-width: 768px){
+
+
+
+}
+
+@media (max-width: 640px){
+
+
+    
+}
