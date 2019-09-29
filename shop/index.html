@@ -112,10 +112,13 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
             </svg>
         </div>
         <div id="search-product-container">
+            <div class="search-close" onclick="closeSearch()">←</div>
             <input id="search-product" placeholder="Suche nach Produkt..." type="text"></input>
-            <picture class="search-icon">🔎
-                <img src="" alt="">
-            </picture>
+            <div class="search-icon-img" onclick="openSearch()">🔎
+                <picture>
+                    <img src="" alt="">
+                </picture>
+            </div>
         </div>
 
     <!-- ================= Page Main Nav ================= -->
@@ -9370,7 +9373,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 <!-- =============================================== -->
 <!-- ================= Page Footer ================= -->
 <!-- =============================================== -->
-<footer id="page-footer">
+<!-- <footer id="page-footer">
 
     <section id="kundenservice">
         <h2>Kundenservice</h2>
@@ -9423,7 +9426,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
         </ul>
     </section>
 
-</footer>
+</footer> -->
 
     <script src="js/product-description.js"></script>
     <script src="js/on-scroll-header.js"></script>
