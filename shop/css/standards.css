@@ -146,6 +146,8 @@ h4{font-size: var(--txt-normal);}
 h5{font-size: var(--txt-normal);}
 h6{font-size: var(--txt-klein);}
 
+p{font-size: var(--txt-normal);}
+
 select{
     font-family: open-sans;
     font-size: var(--txt-normal);
