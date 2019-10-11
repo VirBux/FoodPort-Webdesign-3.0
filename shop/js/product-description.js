@@ -58,8 +58,8 @@ $(function() {
         // console.log(e)
     })
 
-    function renderevents(e){
-        $('#infoblock').html(e.currentTarget.children[1].children[1].children[0].innerText)
+    function renderevents(e){ //product-container -> prod-desc -> desc-main -> desc-title
+        $('#infoblock').html(e.currentTarget.children[3].children[1].children[0].innerText);
     }
 
     /* Filter - Preise / Herkunft / Händler */

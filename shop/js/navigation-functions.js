@@ -1,13 +1,31 @@
 var root = document.documentElement; // Root preset for manipulation css root
 
 var headerLogo = document.getElementById("logo");
+var searchContainer = document.getElementById('search-product-container');
+
+//Nav
 var headerTitle = document.getElementsByClassName("nav-title");
 var pageNav = document.getElementById('page-main-nav');
-var vendorHeaderBackground = document.getElementsByClassName('additional-head-background');
-var additionalMainHeaderLeft = document.getElementById('additional-main-header-left');
-var additionalMainHeaderMiddle = document.getElementById('additional-main-header-middle');
-var additionalMainHeaderRight = document.getElementById('additional-main-header-right');
-var vendorProperties = document.getElementsByClassName('vendor-properties-container');
+var filter = document.getElementById('filter');
+var navFilter = document.getElementById('nav-filter');
+var selectEsskultur = document.getElementById('select-esskultur');
+var navEsskultur = document.getElementById('nav-esskultur');
+
+// Additional Header
+var additionalMainHeader = document.getElementById('additional-main-header');
+  var additionalMainHeaderLeft = document.getElementById('additional-main-header-left');
+  var additionalMainHeaderMiddle = document.getElementById('additional-main-header-middle');
+    var vendorProperties = document.getElementsByClassName('vendor-properties-container');
+    var vendorPrice = document.getElementsByClassName('vendor-price');
+    var vendorError = document.getElementsByClassName('vendor-prop-error');
+    var vendorHeaderBackground = document.getElementsByClassName('additional-head-background');
+  var additionalMainHeaderRight = document.getElementById('additional-main-header-right');
+
+
+//Filter
+var vendorFilter = document.getElementById('vendor-filter');
+
+
 
 
 // Get start settings
@@ -16,7 +34,10 @@ var headerHeight = document.getElementById("page-header").offsetHeight;
 var vendorPropertiesHeight = vendorProperties[0].offsetHeight;
 
 
-// When the user scrolls down 50px from the top of the document, resize the header's font size
+/* ======================================== */
+/* ========== Scroll fucntion ============= */
+
+// When the user scrolls down 50px from the top of the document, resize the header
 window.onscroll = function() {scrollFunction()}
 
 function scrollFunction() {
@@ -72,17 +93,47 @@ function scrollFunction() {
   
 }
 
+/* ======================================== */
+/* ============ Vendor Error ============== */
+for(let i = 0; i < vendorPrice.length; i++){
+  if (parseInt(vendorPrice[i].innerHTML) < vendorPrice[i].getAttribute("data-min-val")) {
+    vendorPrice[i].parentElement.classList.add("active")
+    vendorError[i].classList.add("active")
+  }
+}
+
+
+/* ======================================== */
+/* ======================================== */
+
 // Searchbar function at display widht 1200px
-
-var searchContainer = document.getElementById('search-product-container');
-
-
 function openSearch() {
   searchContainer.classList.toggle("push-product-search")
 }
 
 function closeSearch() {
   searchContainer.classList.remove("push-product-search")
+}
+
+// Filter funcions
+function openFilter(){
+  navFilter.classList.toggle("selected")
+  filter.classList.toggle("selected")
+}
+
+function closeFilter() {
+  navFilter.classList.toggle("selected")
+  filter.classList.toggle("selected")
+}
+
+function openEsskultur() {
+  navEsskultur.classList.toggle("selected")
+  selectEsskultur.classList.toggle("selected")
+  additionalMainHeader.classList.toggle("kill-z-index")
+}
+
+function openVendorFilter() {
+  vendorFilter.classList.toggle("selected")
 }
 
 
