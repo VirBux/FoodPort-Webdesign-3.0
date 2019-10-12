@@ -9,7 +9,7 @@
 #page-header{                   z-index: 105    }
 #additional-main-header{        z-index: 105    }
 #main-header{                   z-index: 100    }
-#filter{                        z-index: 90     }
+#filter{                        z-index: 120     }
 #filter > main{                 z-index: 89     }
 #filteroverlay{                 z-index: 88     }
 .img-selected{                  z-index: 40     }
@@ -39,8 +39,7 @@
     height: 100vh;
     width: 100vw;
 
-    
-    display: none;
+    display: ; /*Allways none*/
 }
 
 #filter.selected{
@@ -56,9 +55,90 @@
 
     #filter > main{
         position: absolute;
+        width: 75%;
+        min-height: 50%;
         background-color: white;
         padding: 10px;
+        border: 2px solid var(--main-col);
     }
+
+    #filter > main > h2{
+        text-align: center;
+        width: 100%;
+    }
+
+    #filter > main > .close-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        --border: 2px;
+        position: absolute;
+        right: calc(var(--border) * (-1));
+        top: calc(var(--border) * (-1));
+        height: 50px;
+        width: 50px;
+        border: solid var(--main-col) var(--border);
+        cursor: pointer;
+    }
+
+    #filter > main > .close-btn > svg{
+        height: 70%;
+        fill: var(--main-col);
+        stroke: var(--main-col);
+        transition-duration: 0.4s;
+    }#filter > main > .close-btn:hover{
+        background-color: var(--red-light);
+    }#filter > main > .close-btn:hover svg{
+        stroke: var(--red);
+    }
+
+        #filter > main > article{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+            #filter-status{
+                height: 40px;
+                width: 90%;
+                border: solid black 1px;
+                margin-bottom: 10px;
+            }
+
+            .search-restr-wrapper{
+
+                width: 50%;
+            }
+
+                .search-restr-container{
+                    width: 100%;
+                    padding-left: 50%;
+                    transform: translateX(-25%);
+                }
+
+                    .search-restr-container > *{
+
+                    }
+
+
+                .search-restr-container-checkboxes{
+                    width: 100%;
+                    padding-left: 50%;
+                    transform: translateX(-25%);
+                    margin-top: 20px;
+                    font-size: var(--txt-normal);
+                    font-family: open-sans;
+                    color: var(--main-col);
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                }
+
+            .view-settings{
+                display: flex;
+                justify-content: center;
+                width: 50%;
+            }
 
 /* ==================================================================== */
 /* ==================================================================== */
@@ -677,7 +757,7 @@
             font-size: var(--txt-mittel);
         }
 
-            .close-btn{
+            .vendor-filter-wrapper > .close-btn{
                 position: relative;
                 bottom: 0;
                 margin-top: 18px;
@@ -1039,13 +1119,13 @@
                 background-color: var(--red-light);
             }
 
-                .kreuz-line-icon{
+                .product-description-close-btn .kreuz-line-icon{
                     fill: var(--blue);
                     stroke: var(--blue);
                     stroke-width: 1.5px;
                     stroke-miterlimit: 10;
                     transition-duration: 0.2s;
-                }.product-description-close-btn:hover .kreuz-line-icon{
+                }.product-description-close-btn .product-description-close-btn:hover .kreuz-line-icon{
                     stroke: var(--red);
                 }
 

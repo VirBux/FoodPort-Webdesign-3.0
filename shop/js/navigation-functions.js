@@ -1,3 +1,5 @@
+/* Only Vanilla JS - by Denny Ovcar */
+
 var root = document.documentElement; // Root preset for manipulation css root
 
 var headerLogo = document.getElementById("logo");
@@ -24,6 +26,8 @@ var additionalMainHeader = document.getElementById('additional-main-header');
 
 //Filter
 var vendorFilter = document.getElementById('vendor-filter');
+var dropdownT = document.querySelector('.dropdown-title');
+
 
 
 
@@ -86,7 +90,7 @@ function scrollFunction() {
 
     /* Vendorproperties show */
     for(let i = 0; i < vendorProperties.length; i++){
-      slideDown(vendorProperties[i])
+      slideDown(vendorProperties[i], vendorPropertiesHeight)
     }
 
   }
@@ -136,6 +140,40 @@ function openVendorFilter() {
   vendorFilter.classList.toggle("selected")
 }
 
+function dropdown() {
+  let ul = getSiblings(dropdownT)[0]
+  ul.classList.toggle("active")
+  if (hasClass(ul, "active")) {
+    slideDown(ul, 250)
+  }else{
+    slideUp(ul)
+  }
+}
+
+/* --------- Some jQuery replacements --------- */
+
+/* Siblings catcher */
+var getSiblings = function(e) {
+  	// Setup siblings array and get the first sibling
+	var siblings = [];
+	var sibling = e.parentNode.firstChild;
+
+	// Loop through each sibling and push to the array
+	while (sibling) {
+		if (sibling.nodeType === 1 && sibling !== e) {
+			siblings.push(sibling);
+		}
+		sibling = sibling.nextSibling
+	}
+
+	return siblings;
+}
+
+/* Classchecker */
+function hasClass(element, cls) {
+  return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+
 
 /* Slide Functions */
 function slideUp(el) {
@@ -144,8 +182,8 @@ function slideUp(el) {
   el.style.opacity = "0";
 }
 
-function slideDown(el) {
+function slideDown(el, height) {
   el.style.transition = "all 0.2s ease-in-out";
-  el.style.height = vendorPropertiesHeight + "px";
+  el.style.height = height + "px";
   el.style.opacity = "1";
 }

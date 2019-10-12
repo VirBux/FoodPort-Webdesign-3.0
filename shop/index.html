@@ -12,9 +12,9 @@
 </head>
 <!-- <body> -->
 <body> 
-<!-- ============================================================================ -->  
-<!-- --------------------- Errors --------------------- -->
-
+                                <!-- ======================================================== -->
+                                <!-- ======================== Errors ======================== -->
+                                <!-- ======================================================== -->
 <!-- Veralteter Browser -->
 <div id="ie-execution" style="display:none">
     <h2 style="color: #0B8E36">Willkommen bei 🛒 FoodPort.ch</h2>
@@ -31,21 +31,26 @@
 <!-- Javascript Error -->
 <noscript>
 <a href="https://support.google.com/adsense/answer/12654?hl=de">
-Dein Javascript ist ausgeschaltet! <br>
+Ihr Javascript ist ausgeschaltet! <br>
 Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 </a>
 </noscript>
-
-<!-- -------------------- Errors end -------------------- -->    
-<!-- ============================================================================ -->  
-
-                                            <!-- ======================================================== -->
-                                            <!-- ======================== Filter ======================== -->
-                                            <!-- ======================================================== -->
-
+                                <!-- -------------------- Errors end ------------------------ -->    
+                                <!-- ======================================================== -->
+                                <!-- ======================== Filter ======================== -->
+                                <!-- ======================================================== -->
 <section id="filter">
     <div id="filteroverlay" onclick="closeFilter()"></div>
     <main>
+        <div class="close-btn" onclick="closeFilter()">
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" class="kreuz-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 15.2 15.2" style="enable-background:new 0 0 15.2 15.2;" xml:space="preserve">
+            <line class="kreuz-line-icon" x1="0.4" y1="14.9" x2="14.9" y2="0.4"/>
+            <line class="kreuz-line-icon" x1="0.4" y1="0.4" x2="14.9" y2="14.9"/>
+            </svg>
+        </div>
         <h2>Filter</h2>
         <article>
 
@@ -53,64 +58,154 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
             </section>
 
-            <!-- View settings -->
-            <form method="POST">
-                <h3>Anzeigeeinstellungen</h3>
-                <label for="">Sortiere nach:</label>
-                <select name="" id="">
-                    <option value="">Standart</option>
-                    <option value="">Name A-Z</option>
-                    <option value="">Name Z-A</option>
-                    <option value="">Preis (Hoch > Tief)</option>
-                    <option value="">Preis (Tief > Hoch)</option>
-                    <option value="">Bewertung (Hoch > Tief)</option>
-                    <option value="">Bewertung (Tief > Hoch)</option>
-                    <option value="">Gewicht (Hoch > Tief)</option>
-                    <option value="">Gewicht (Tief > Hoch)</option>
-                </select>
-                <label for="">Anzeigen</label>
-                <select name="" id="">
-                    <option value="">16</option>
-                    <option value="">24</option>
-                    <option value="">32</option>
-                    <option value="">40</option>
-                    <option value="">48</option>
-                    <option value="">56</option>
-                </select>
-            </form>
-
             <!-- Search Settings -->
-            <form id="search-restr" method="POST">
-                <h3>Sucheinschränkungen</h3>
 
-                <select name="" id="">
-                    <option selected disabled>Herkunft</option>
-                    <option value="">Deutschland</option>
-                </select>
+            <section class="search-restr-wrapper">
 
-                <select name="" id="">
-                    <option selected disabled>Alkoholgehalt</option>
-                    <option value=""></option>
-                </select>
+                <article class="search-restr-container">
+                    <h3>Sucheinschränkungen</h3>
+                    <form method="POST" class="dropdown-wrapper" id="nav-origin-filter">
+                        <h4 class="dropdown-title" onclick="dropdown()">Herkunft</h4>
+                        <ul class="dropdown">
+                            <li><input id="deutschland" type="checkbox"><label for="deutschland">🇩🇪 Deutschland</label></li>
+                            <li><input id="Frankreich" type="checkbox"><label for="Frankreich">Frankreich</label></li>
+                            <li><input id="Norwegen" type="checkbox"><label for="Norwegen">Norwegen</label></li>
+                            <li>12</li>
+                            <li>13</li>
+                            <li>15</li>
+                            <li>16</li>
+                            <li>17</li>
+                            <li>18</li>
+                            <li>19</li>
+                            <li>20</li>
+                            <li>21</li>
+                            <li>22</li>
+                            <li>23</li>
+                            <li>24</li>
+                            <li>25</li>
+                            <li>26</li>
+                            <li>28</li>
+                        </ul>
+                    </form>
 
-                <select name="" id="">
-                    <option selected disabled>Hersteller</option>
-                    <option value=""></option>
-                </select>
+                    <form method="POST" class="dropdown-wrapper" id="nav-alk-filter">
+                        <h4 class="dropdown-title" onclick="dropdown()">Alkoholgehalt</h4>
+                        <ul class="dropdown">
+                            <li><input id="" type="checkbox"><label for="">5%</label></li>
+                            <li><input id="" type="checkbox"><label for="">7%</label></li>
+                            <li><input id="" type="checkbox"><label for="">8%</label></li>
+                            <li>12</li>
+                            <li>13</li>
+                            <li>15</li>
+                            <li>16</li>
+                            <li>17</li>
+                            <li>18</li>
+                            <li>19</li>
+                            <li>20</li>
+                            <li>21</li>
+                            <li>22</li>
+                            <li>23</li>
+                            <li>24</li>
+                            <li>25</li>
+                            <li>26</li>
+                            <li>28</li>
+                        </ul>
+                    </form>
 
-                <select name="" id="">
-                    <option selected disabled>Händler</option>
-                    <option value=""></option>
-                </select>
-            </form>
+                    <form method="POST" class="dropdown-wrapper" id="nav-producer-filter">
+                        <h4 class="dropdown-title" onclick="dropdown()">Hersteller</h4>
+                        <ul class="dropdown">
+                            <li><input id="" type="checkbox"><label for="">1</label></li>
+                            <li><input id="" type="checkbox"><label for="">2</label></li>
+                            <li><input id="" type="checkbox"><label for="">3</label></li>
+                            <li>12</li>
+                            <li>13</li>
+                            <li>15</li>
+                            <li>16</li>
+                            <li>17</li>
+                            <li>18</li>
+                            <li>19</li>
+                            <li>20</li>
+                            <li>21</li>
+                            <li>22</li>
+                            <li>23</li>
+                            <li>24</li>
+                            <li>25</li>
+                            <li>26</li>
+                            <li>28</li>
+                        </ul>
+                    </form>
+
+                    <form method="POST" class="dropdown-wrapper" id="nav-vendor-filter">
+                        <h4 class="dropdown-title" onclick="dropdown()">Händler</h4>
+                        <ul class="dropdown">
+                            <li><input id="" type="checkbox"><label for="">1</label></li>
+                            <li><input id="" type="checkbox"><label for="">2</label></li>
+                            <li><input id="" type="checkbox"><label for="">3</label></li>
+                            <li>12</li>
+                            <li>13</li>
+                            <li>15</li>
+                            <li>16</li>
+                            <li>17</li>
+                            <li>18</li>
+                            <li>19</li>
+                            <li>20</li>
+                            <li>21</li>
+                            <li>22</li>
+                            <li>23</li>
+                            <li>24</li>
+                            <li>25</li>
+                            <li>26</li>
+                            <li>28</li>
+                        </ul>
+                    </form>
+                </article>
+
+                <article class="search-restr-container-checkboxes">
+                    <form method="POST" id="nav-checkboxes">
+                        <ul>
+                            <li><input id="invisibly-selled-prod-check" type="checkbox"><label for="invisibly-selled-prod-check">Ausverkaufte Produkte ausblenden</label></li>
+                            <li><input id="invisibly-fresh-prod-check" type="checkbox"><label for="invisibly-fresh-prod-check">Frischwaren ausblenden</label></li>
+                        </ul>
+                    </form>
+                </article>
+
+            </section>
+
+            <!-- View settings -->
+            <section class="view-settings">
+                <form method="POST">
+                    <h3>Anzeigeeinstellungen</h3>
+                    <label for="">Sortiere nach:</label>
+                    <select name="" id="">
+                        <option value="">Standart</option>
+                        <option value="">Name A-Z</option>
+                        <option value="">Name Z-A</option>
+                        <option value="">Preis (Hoch > Tief)</option>
+                        <option value="">Preis (Tief > Hoch)</option>
+                        <option value="">Bewertung (Hoch > Tief)</option>
+                        <option value="">Bewertung (Tief > Hoch)</option>
+                        <option value="">Gewicht (Hoch > Tief)</option>
+                        <option value="">Gewicht (Tief > Hoch)</option>
+                    </select>
+                    <label for="">Anzeigen</label>
+                    <select name="" id="">
+                        <option value="">16</option>
+                        <option value="">24</option>
+                        <option value="">32</option>
+                        <option value="">40</option>
+                        <option value="">48</option>
+                        <option value="">56</option>
+                    </select>
+                </form>
+            </section>
 
         </article>
     </main>
 </section>
-
-                                            <!-- ======================================================== -->
-                                            <!-- ====================== main Header ===================== -->
-                                            <!-- ======================================================== -->
+                                <!-- ======================================================== -->
+                                <!-- ====================== Main Header ===================== -->
+                                <!-- ======================================================== -->
 <header id="main-header">
 
         <!-- ================= P A G E   H E A D E R ================================ -->
@@ -681,9 +776,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
     
         </header>
 </header>
-                                            <!-- ======================================================== -->
-                                            <!-- ======================= Page Main ====================== -->
-                                            <!-- ======================================================== -->
+                                <!-- ======================================================== -->
+                                <!-- ======================= Page Main ====================== -->
+                                <!-- ======================================================== -->
 <main id="page-main">
 
     <aside id="vendor-filter">
@@ -911,11 +1006,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
         </section>
 
     </nav> 
-
                                                     <!-- ================================================== -->
                                                     <!-- ================= Productwrapper ================= -->
                                                     <!-- ================================================== -->
-
     <section id="product-wrapper">
 
         <div class="overlay-products"></div>
@@ -10020,9 +10113,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
         <p id="products-loaded">32 Produkte von 2500 geladen</p>
     </section>
 </footer>
-<!-- =============================================== -->
-<!-- ================= Page Footer ================= -->
-<!-- =============================================== -->
+                                <!-- ======================================================== -->
+                                <!-- ====================== Page Footer ===================== -->
+                                <!-- ======================================================== -->
 <footer id="page-footer">
 
     <section id="kundenservice">
