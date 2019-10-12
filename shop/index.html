@@ -55,7 +55,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
         <article>
 
             <section id="filter-status">
-
+                <h4>Aktiv:</h4>
+                <div>Händler<span>❌</span></div> <!-- Span is for killing filter -->
+                <div>Händler<span>❌</span></div>
+                <div>Händler<span>❌</span></div>
+                <div>Händler<span>❌</span></div>
             </section>
 
             <!-- Search Settings -->
@@ -67,9 +71,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                     <form method="POST" class="dropdown-wrapper" id="nav-origin-filter">
                         <h4 class="dropdown-title" onclick="dropdown()">Herkunft</h4>
                         <ul class="dropdown">
-                            <li><input id="deutschland" type="checkbox"><label for="deutschland">🇩🇪 Deutschland</label></li>
-                            <li><input id="Frankreich" type="checkbox"><label for="Frankreich">Frankreich</label></li>
-                            <li><input id="Norwegen" type="checkbox"><label for="Norwegen">Norwegen</label></li>
+                            <li><input id="deutschland" type="checkbox"><label for="deutschland"><span class="country-flag">🇩🇪</span>Deutschland</label></li>
+                            <li><input id="Frankreich" type="checkbox"><label for="Frankreich"><span class="country-flag">🇫🇷</span>Frankreich</label></li>
+                            <li><input id="Norwegen" type="checkbox"><label for="Norwegen"><span class="country-flag">🇳🇴</span>Norwegen</label></li>
                             <li>12</li>
                             <li>13</li>
                             <li>15</li>
@@ -173,11 +177,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
             </section>
 
             <!-- View settings -->
-            <section class="view-settings">
-                <form method="POST">
+            <section class="view-settings-container">
+                <form method="POST" id="view-settings">
                     <h3>Anzeigeeinstellungen</h3>
                     <label for="">Sortiere nach:</label>
-                    <select name="" id="">
+                    <select name="" id="test">
                         <option value="">Standart</option>
                         <option value="">Name A-Z</option>
                         <option value="">Name Z-A</option>
@@ -188,14 +192,15 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <option value="">Gewicht (Hoch > Tief)</option>
                         <option value="">Gewicht (Tief > Hoch)</option>
                     </select>
-                    <label for="">Anzeigen</label>
+                    <br><br>
+                    <label for="">Produkte laden:</label>
                     <select name="" id="">
-                        <option value="">16</option>
-                        <option value="">24</option>
-                        <option value="">32</option>
-                        <option value="">40</option>
-                        <option value="">48</option>
-                        <option value="">56</option>
+                        <option value="">16 Produkte</option>
+                        <option value="">24 Produkte</option>
+                        <option value="">32 Produkte</option>
+                        <option value="">40 Produkte</option>
+                        <option value="">48 Produkte</option>
+                        <option value="">56 Produkte</option>
                     </select>
                 </form>
             </section>
@@ -798,9 +803,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
             </article>
             
             <article class="vendor-filter-container">
-                <div class="vendor-filter-img">Mago
+                <div class="vendor-filter-img">
                     <picture>
-                        <img src="" alt="">
+                        <img src="img/vendor-logo/mago_logo (Vektorisiert).svg" alt="">
                     </picture>
                 </div>
                 <label class="switch">
@@ -810,9 +815,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
             </article>
 
             <article class="vendor-filter-container">
-                <div class="vendor-filter-img">Optimal Food
+                <div class="vendor-filter-img">
                     <picture>
-                        <img src="" alt="">
+                        <img src="img/vendor-logo/optimalfood_logo.png" alt="">
                     </picture>
                 </div>
                 <label class="switch">
@@ -833,7 +838,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                 </label>
             </article>
 
-            <button class="close-btn" onclick="openVendorFilter()">🠄 Schliessen</button>
+            <button class="close-btn" onclick="openVendorFilter()">← Schliessen</button>
 
         </section>
 
@@ -1208,7 +1213,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a href="" class="nährwerte-container">
                                 <div class="nährwerte-img">
                                     <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                         <?xml version="1.0" encoding="utf-8"?>
@@ -1236,7 +1241,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <h3 class="nährwerte">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a href="" target="_blank" class="wikipedia-container">
                                 <h3 class="wikipedia">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
@@ -1260,7 +1265,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -1272,7 +1278,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -1556,7 +1562,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -1840,7 +1846,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -2124,7 +2130,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -2408,7 +2414,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -2692,7 +2698,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -2976,7 +2982,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -3260,7 +3266,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -3544,7 +3550,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -3828,7 +3834,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -4112,7 +4118,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -4396,7 +4402,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -4680,7 +4686,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -4964,7 +4970,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -5248,7 +5254,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -5532,7 +5538,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -5816,7 +5822,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -6100,7 +6106,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -6384,7 +6390,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -6668,7 +6674,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -6952,7 +6958,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -7236,7 +7242,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -7520,7 +7526,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -7804,7 +7810,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -8088,7 +8094,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -8372,7 +8378,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -8656,7 +8662,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -8940,7 +8946,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -9224,7 +9230,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -9508,7 +9514,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -9792,7 +9798,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -10076,7 +10082,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
                                     <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
-                                <input class="add-qty" min="0" name="quantity" value="1" type="number">
+                                <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                     <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                                 </button>
@@ -10164,8 +10170,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
             </picture>
         </div>
         <ul>
-            <li>Kreditkarten</li>
-            <li>Vorauszahlung (IBAN)</li>
+            <li>Kreditkarten Mastercard & Visa</li>
+            <li style="color:gray">Bald auch: Vorauszahlung (IBAN)</li>
         </ul>
     </section>
 

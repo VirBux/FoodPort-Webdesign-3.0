@@ -169,12 +169,12 @@ select{
       linear-gradient(135deg, var(--main-col) 50%, transparent 50%),
       linear-gradient(to right, var(--main-col), var(--main-col));
     background-position:
-      calc(100% - 20px) calc(1em + 2px),
-      calc(100% - 15px) calc(1em + 2px),
-      calc(100% - 2.5em) 0.5em;
+      calc(100% - 19px) calc(1em + 2px),
+      calc(100% - 9px) calc(1em + 2px),
+      calc(100% - 2em) 0.5em;
     background-size:
-      5px 5px,
-      5px 5px,
+      10px 10px,
+      10px 10px,
       1px 1.5em;
     background-repeat: no-repeat;
 }
@@ -185,18 +185,32 @@ select{
       linear-gradient(135deg, transparent 50%, green 50%),
       linear-gradient(to right, #ccc, #ccc);
     background-position:
-      calc(100% - 15px) 1em,
-      calc(100% - 20px) 1em,
-      calc(100% - 2.5em) 0.5em;
+      calc(100% - 9px) 1em,
+      calc(100% - 19px) 1em,
+      calc(100% - 2em) 0.5em;
     background-size:
-      5px 5px,
-      5px 5px,
+      10px 10px,
+      10px 10px,
       1px 1.5em;
     background-repeat: no-repeat;
     border-color: green;
     outline: 0;
   }
-  
+
+  @media screen and (max-width: 1200px){
+    select{
+      background-position:
+      calc(100% - 19px) calc(1em + 2px),
+      calc(100% - 9px) calc(1em + 2px),
+      calc(100% - 3em) 0.5em;
+    }
+    select:focus {
+      background-position:
+        calc(100% - 9px) 1em,
+        calc(100% - 19px) 1em,
+        calc(100% - 3em) 0.5em;
+  }
+}
 
 /* ---------------------- Fonts end ---------------------- */
 
@@ -381,7 +395,7 @@ input:checked + .slider:before {
 
 /* Custom Multi-Dropdown */
 
-:root{--dropdown-width: 300px;}
+:root{--dropdown-width: 400px;}
 
 .dropdown-wrapper{
   width: var(--dropdown-width);
@@ -413,6 +427,7 @@ input:checked + .slider:before {
   max-height: 250px;
   min-width: var(--dropdown-width);
   background-color: white;
+  border: var(--main-col) solid 1px;
   overflow-x: hidden;
   height: 0;
   opacity: 0;
@@ -424,6 +439,10 @@ input:checked + .slider:before {
   -ms-user-select: none;
   user-select: none;
 }.dropdown.active{max-height: ;}
+
+.dropdown li{
+  padding: 2px;
+}
 
 /* Disable selecting */
 .unselect{

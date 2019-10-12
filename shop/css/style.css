@@ -39,7 +39,7 @@
     height: 100vh;
     width: 100vw;
 
-    display: ; /*Allways none*/
+    display: none; /*Allways none*/
 }
 
 #filter.selected{
@@ -50,21 +50,24 @@
         position: absolute;
         height: 100%;
         width: 100%;
-        background-color: rgba(28, 28, 28, 0.568);
+        background-color: rgba(28, 28, 28, 0.5);
     }
 
     #filter > main{
         position: absolute;
         width: 75%;
-        min-height: 50%;
+        padding: 10px 0 30px 0!important;
         background-color: white;
         padding: 10px;
         border: 2px solid var(--main-col);
     }
 
     #filter > main > h2{
+        font-size: var(--txt-sehr-gross);
         text-align: center;
         width: 100%;
+        margin-bottom: 16px;
+        letter-spacing: 3px;
     }
 
     #filter > main > .close-btn{
@@ -97,48 +100,115 @@
             flex-wrap: wrap;
             justify-content: space-around;
             width: 100%;
+            color: var(--main-col);
         }
 
+            #filter > main > article h3{
+                margin-bottom: 10px;
+                letter-spacing: 2px;
+            }
+
             #filter-status{
-                height: 40px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                min-height: 50px;
                 width: 90%;
-                border: solid black 1px;
+                padding: 0 10px;
+                border: solid lightgray 1px;
+                margin-bottom: 20px;
+            }
+            #filter-status > div{
+                display: flex;
+                align-items: center;
+                margin: 0 10px;
+                font-size: var(--txt-normal);
+                font-family: open-sans;
+                
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            #filter-status > div > span{
+                font-size: var(--txt-klein);
+                cursor: pointer;
+            }
+
+
+            #filter > main > article .dropdown-title{
                 margin-bottom: 10px;
             }
 
-            .search-restr-wrapper{
-
-                width: 50%;
+            #filter > main > article .dropdown{
+                margin-top: -11px;
+                color: black;
             }
 
-                .search-restr-container{
-                    width: 100%;
-                    padding-left: 50%;
-                    transform: translateX(-25%);
-                }
-
-                    .search-restr-container > *{
-
-                    }
-
+                .dropdown .country-flag{display: none;}
 
                 .search-restr-container-checkboxes{
-                    width: 100%;
-                    padding-left: 50%;
-                    transform: translateX(-25%);
-                    margin-top: 20px;
+                    margin: 20px 0;
                     font-size: var(--txt-normal);
                     font-family: open-sans;
-                    color: var(--main-col);
                     font-weight: bold;
                     letter-spacing: 1px;
                 }
 
-            .view-settings{
-                display: flex;
-                justify-content: center;
-                width: 50%;
+                .search-restr-container-checkboxes ul li{
+                    margin-bottom: 10px;
+                }
+
+                .search-restr-container-checkboxes ul li label{
+                    margin-left: 5px;
+                }
+
+            .view-settings-container{
+                font-size: var(--txt-normal);
+                font-family: open-sans;
             }
+
+
+                .view-settings-container select{
+                    height: 30px;
+                    width: 160px;
+                    float: right;
+
+                    background-position:
+                    calc(100% - 19px) calc(1em + -5px),
+                    calc(100% - 9px) calc(1em + -5px),
+                    calc(100% - 2em) 0.2em;
+                }.view-settings-container select:focus{
+                    background-position:
+                    calc(100% - 9px) 0.5em,
+                    calc(100% - 19px) 0.5em,
+                    calc(100% - 2em) 0.5em;
+                }
+
+                .view-settings-container label{
+                    display: flex;
+                    align-items: center;
+                    float: left;
+                    height: 30px;
+                    margin-right: 20px;
+                }
+
+                @media screen and (max-width: 1200px){
+                    .view-settings-container select{
+                      background-position:
+                      calc(100% - 19px) calc(1em + 2px),
+                      calc(100% - 9px) calc(1em + 2px),
+                      calc(100% - 3em) 0.5em;
+                    }
+                    .view-settings-container select:focus {
+                      background-position:
+                        calc(100% - 9px) 1em,
+                        calc(100% - 19px) 1em,
+                        calc(100% - 3em) 0.5em;
+                  }
+                }
 
 /* ==================================================================== */
 /* ==================================================================== */
@@ -708,7 +778,7 @@
 
 /* Vendor Filter left */
 
-:root{--vendor-filter-width: 220px;}
+:root{--vendor-filter-width: 250px;}
 
 #vendor-filter{
     position: fixed;
@@ -757,6 +827,15 @@
             font-size: var(--txt-mittel);
         }
 
+        .vendor-filter-container > .vendor-filter-img{
+            max-height: 27px;
+        }
+
+        .vendor-filter-container > .vendor-filter-img > picture > *{
+            height: 100%;
+            width: auto;
+        }
+
             .vendor-filter-wrapper > .close-btn{
                 position: relative;
                 bottom: 0;
@@ -778,7 +857,7 @@
             background-color: var(--blue);
             text-align: center;
             margin-right: -12px;
-            padding: 10% 8px;
+            padding: 9% 8px;
             border-radius: 20px 0 0 20px;
             border: solid 1px var(--blue);
             transition-duration: 0.6s;
@@ -1505,9 +1584,6 @@
                 transition-duration: 0.2s;
             }
 
-
-
-
                     /* ==================================================================== */
                     /* ==================================================================== */
                     /* ==================================================================== */
@@ -1580,6 +1656,15 @@
 @media (max-width: 1200px){
 
     :root{--searchbar-height: 60px;}
+
+    #filter > main > .close-btn{
+        height: 35px;
+        width: 35px;
+    }
+
+    #filter-status{
+        min-height: 35px;
+    }
 
     #search-product-container{
         position: fixed;
@@ -1836,7 +1921,10 @@
 
 @media (max-width: 700px){
 
-    :root{--header-height-mob: 160px;}
+    :root{
+        --header-height-mob: 160px;
+        --dropdown-width: 60vw;
+    }
 
     #page-header{
         height: var(--header-height-mob);
@@ -1984,10 +2072,27 @@
 @media (max-width: 400px){
 
     :root{--nav-width: 120px;}
-    #page-header{height: 110px;}
-    #logo{
-        width: 152.5px!important;
+
+    #filter > main{
+        border-radius: 20px;
+        width: 85%;
     }
+
+    #filter > main > .close-btn{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        top: 2px;
+        right: 2px;
+    }
+
+    .dropdown .country-flag{
+        display: inline-block;
+        margin-right: 3px;
+    }
+
+    #page-header{height: 110px;}
+    #logo{width: 152.5px!important;}
     #page-main-nav{height: 70px;}
     .nav-img{height: 50%!important;}
     #page-main-nav > ul{margin-top: 5px;}
@@ -2043,6 +2148,8 @@
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 
 @media (max-width: 360px){
+
+    #filter > main{width: 92%;}
 
     #search-product-container{left: calc(-100vw + 68px);}
 
