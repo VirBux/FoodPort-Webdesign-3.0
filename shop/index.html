@@ -69,7 +69,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                 <article class="search-restr-container">
                     <h3>Sucheinschränkungen</h3>
                     <form method="POST" class="dropdown-wrapper" id="nav-origin-filter">
-                        <h4 class="dropdown-title" onclick="dropdown()">Herkunft</h4>
+                        <h4 class="dropdown-title">Herkunft</h4>
                         <ul class="dropdown">
                             <li><input id="deutschland" type="checkbox"><label for="deutschland"><span class="country-flag">🇩🇪</span>Deutschland</label></li>
                             <li><input id="Frankreich" type="checkbox"><label for="Frankreich"><span class="country-flag">🇫🇷</span>Frankreich</label></li>
@@ -93,7 +93,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                     </form>
 
                     <form method="POST" class="dropdown-wrapper" id="nav-alk-filter">
-                        <h4 class="dropdown-title" onclick="dropdown()">Alkoholgehalt</h4>
+                        <h4 class="dropdown-title">Alkoholgehalt</h4>
                         <ul class="dropdown">
                             <li><input id="" type="checkbox"><label for="">5%</label></li>
                             <li><input id="" type="checkbox"><label for="">7%</label></li>
@@ -117,7 +117,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                     </form>
 
                     <form method="POST" class="dropdown-wrapper" id="nav-producer-filter">
-                        <h4 class="dropdown-title" onclick="dropdown()">Hersteller</h4>
+                        <h4 class="dropdown-title">Hersteller</h4>
                         <ul class="dropdown">
                             <li><input id="" type="checkbox"><label for="">1</label></li>
                             <li><input id="" type="checkbox"><label for="">2</label></li>
@@ -141,7 +141,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                     </form>
 
                     <form method="POST" class="dropdown-wrapper" id="nav-vendor-filter">
-                        <h4 class="dropdown-title" onclick="dropdown()">Händler</h4>
+                        <h4 class="dropdown-title">Händler</h4>
                         <ul class="dropdown">
                             <li><input id="" type="checkbox"><label for="">1</label></li>
                             <li><input id="" type="checkbox"><label for="">2</label></li>
@@ -192,9 +192,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <option value="">Gewicht (Hoch > Tief)</option>
                         <option value="">Gewicht (Tief > Hoch)</option>
                     </select>
-                    <br><br>
-                    <label for="">Produkte laden:</label>
-                    <select name="" id="">
+                    <br>
+                    <label for="load-prod-qty">Produkte laden:</label>
+                    <select name="" id="load-prod-qty">
                         <option value="">16 Produkte</option>
                         <option value="">24 Produkte</option>
                         <option value="">32 Produkte</option>
@@ -381,6 +381,10 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         </picture>
                         <h4 class="language-txt"><!-- SQL -->Deutsch</h4>
                     </div>
+                    <ul class="dropdown">
+                        <li>Deutsch</li>
+                        <li>English</li>
+                    </ul>
                     <div class="language-triangle"></div>
                 </div>
                 <div id="breadcrumb"><!-- SQL -->Home/Shop</div>
@@ -1213,9 +1217,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -1238,14 +1242,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" target="_blank" class="wikipedia-container">
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -1276,11 +1280,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -1498,9 +1502,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -1523,14 +1527,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -1550,7 +1554,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -1560,11 +1565,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -1782,9 +1787,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -1807,14 +1812,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -1834,7 +1839,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -1844,11 +1850,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -2066,9 +2072,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -2091,14 +2097,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -2118,7 +2124,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -2128,11 +2135,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -2350,9 +2357,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -2375,14 +2382,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -2402,7 +2409,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -2412,11 +2420,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -2634,9 +2642,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -2659,14 +2667,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -2686,7 +2694,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -2696,11 +2705,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -2918,9 +2927,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -2943,14 +2952,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -2970,7 +2979,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -2980,11 +2990,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -3202,9 +3212,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -3227,14 +3237,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -3254,7 +3264,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -3264,11 +3275,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -3486,9 +3497,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -3511,14 +3522,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -3538,7 +3549,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -3548,11 +3560,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -3770,9 +3782,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -3795,14 +3807,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -3822,7 +3834,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -3832,11 +3845,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -4054,9 +4067,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -4079,14 +4092,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -4106,7 +4119,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -4116,11 +4130,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -4338,9 +4352,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -4363,14 +4377,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -4390,7 +4404,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -4400,11 +4415,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -4622,9 +4637,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -4647,14 +4662,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -4674,7 +4689,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -4684,11 +4700,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -4906,9 +4922,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -4931,14 +4947,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -4958,7 +4974,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -4968,11 +4985,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -5190,9 +5207,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -5215,14 +5232,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -5242,7 +5259,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -5252,11 +5270,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -5474,9 +5492,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -5499,14 +5517,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -5526,7 +5544,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -5536,11 +5555,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -5758,9 +5777,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -5783,14 +5802,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -5810,7 +5829,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -5820,11 +5840,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -6042,9 +6062,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -6067,14 +6087,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -6094,7 +6114,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -6104,11 +6125,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -6326,9 +6347,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -6351,14 +6372,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -6378,7 +6399,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -6388,11 +6410,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -6610,9 +6632,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -6635,14 +6657,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -6662,7 +6684,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -6672,11 +6695,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -6894,9 +6917,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -6919,14 +6942,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -6946,7 +6969,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -6956,11 +6980,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -7178,9 +7202,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -7203,14 +7227,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -7230,7 +7254,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -7240,11 +7265,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -7462,9 +7487,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -7487,14 +7512,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -7514,7 +7539,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -7524,11 +7550,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -7746,9 +7772,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -7771,14 +7797,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -7798,7 +7824,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -7808,11 +7835,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -8030,9 +8057,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -8055,14 +8082,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -8082,7 +8109,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -8092,11 +8120,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -8314,9 +8342,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -8339,14 +8367,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -8366,7 +8394,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -8376,11 +8405,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -8598,9 +8627,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -8623,14 +8652,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -8650,7 +8679,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -8660,11 +8690,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -8882,9 +8912,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -8907,14 +8937,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -8934,7 +8964,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -8944,11 +8975,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -9166,9 +9197,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -9191,14 +9222,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -9218,7 +9249,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -9228,11 +9260,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -9450,9 +9482,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -9475,14 +9507,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -9502,7 +9534,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -9512,11 +9545,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -9734,9 +9767,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -9759,14 +9792,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -9786,7 +9819,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -9796,11 +9830,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -10018,9 +10052,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
                         <div class="product-links-col1">
 
-                            <a href="" class="nährwerte-container">       <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                            <a target="_blank" class="nährwerte-container">
                                 <div class="nährwerte-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -10043,14 +10077,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                                         </svg>
                                     </picture>
                                 </div>
-                                <h3 class="nährwerte">Nährwerte</h3>
+                                <h3 class="nährwerte unselect">Nährwerte</h3>
                             </a>
 
-                            <a href="" class="wikipedia-container">          <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                                <h3 class="wikipedia">Wikipedia</h3>
+                            <a target="_blank" class="wikipedia-container">
+                                <h3 class="wikipedia unselect">Wikipedia</h3>
 
                                 <div class="wikipedia-img">
-                                    <picture>     <!-- DIV in Picture Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <picture>
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                         <svg version="1.1" class="Wikipedia-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -10070,7 +10104,8 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                             </a>
 
                         </div>
-                        <a href="" class="product-links-col2">        <!-- DIV in a Tag unbenannt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+                        <a href="" class="product-links-col2">
                             <h3 class="product-links-more">Mehr Infos</h3>
                         </a>
 
@@ -10080,11 +10115,11 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         <div class="add-cart-nav-container">
                             <nav class="add-cart-nav">
                                 <button class="minus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" >
-                                    <div class="triangle-left"></div>       <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-left"></div>
                                 </button>
                                 <input class="add-qty" min="1" name="quantity" value="1" type="number">
                                 <button class="plus-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <div class="triangle-right"></div>      <!-- Neu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                                    <div class="triangle-right"></div>
                                 </button>
                             </nav>
                             <div class="product-cart-img">
@@ -10115,7 +10150,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
 
 <footer id="paginator">
     <section>
-        <button onclick="ajax_get('js/products.json')">Mehr Produkte Laden</button>
+        <button id="load-products" onclick="ajax_get('js/products.json')">Mehr Produkte Laden (+<data class="load-qty">32</data>)</button>
         <p id="products-loaded">32 Produkte von 2500 geladen</p>
     </section>
 </footer>

@@ -1,3 +1,5 @@
+/* jQuery - by Denny Ovcar */
+
 $(function() {
     /* Selectors */
     var body = $('body')
@@ -7,6 +9,11 @@ $(function() {
     const screenwidth = (document).querySelector('html').offsetWidth;
 
     /* Clickevents */
+
+    /* Dropdowns */
+    body.on( "click", '.dropdown-title', function() {
+        $(this).siblings(".dropdown").toggle("fast")
+      });
 
     /* Klick auf das Produktbild */
     body.on( "click",'.product-img', function() {
@@ -55,7 +62,6 @@ $(function() {
     /* Hover event */   
     $('.product-container').mousemove(function(e){
         renderevents(e)
-        // console.log(e)
     })
 
     function renderevents(e){ //product-container -> prod-desc -> desc-main -> desc-title
@@ -95,5 +101,5 @@ $(function() {
     fastFilterPriceBox.change(function(){
         productPrice.toggle()
     });
-
+          
 });

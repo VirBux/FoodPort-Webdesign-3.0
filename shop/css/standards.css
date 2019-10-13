@@ -411,6 +411,14 @@ input:checked + .slider:before {
   font-family: open-sans;
   font-weight: bold;
   letter-spacing: 1px;
+  cursor: pointer;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .dropdown-title::after{
@@ -429,8 +437,7 @@ input:checked + .slider:before {
   background-color: white;
   border: var(--main-col) solid 1px;
   overflow-x: hidden;
-  height: 0;
-  opacity: 0;
+  display: none;
 
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -443,6 +450,8 @@ input:checked + .slider:before {
 .dropdown li{
   padding: 2px;
 }
+
+.dropdown input, .dropdown label{cursor: pointer;}
 
 /* Disable selecting */
 .unselect{

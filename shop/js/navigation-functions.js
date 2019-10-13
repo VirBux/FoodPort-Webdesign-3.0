@@ -140,16 +140,6 @@ function openVendorFilter() {
   vendorFilter.classList.toggle("selected")
 }
 
-function dropdown() {
-  let ul = getSiblings(dropdownT)[0]
-  ul.classList.toggle("active")
-  if (hasClass(ul, "active")) {
-    slideDown(ul, 250)
-  }else{
-    slideUp(ul)
-  }
-}
-
 /* --------- Some jQuery replacements --------- */
 
 /* Siblings catcher */

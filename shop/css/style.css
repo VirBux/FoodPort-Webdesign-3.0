@@ -108,6 +108,8 @@
                 letter-spacing: 2px;
             }
 
+            .view-settings-container > form > *{margin-bottom: 10px;}
+
             #filter-status{
                 display: flex;
                 flex-wrap: wrap;
@@ -382,7 +384,9 @@
         justify-content: center;
         align-items: center;
         background-color: var(--main-col-light);
-        width: 150%;
+        border: 2px var(--main-col) solid;
+        border-top: none;
+        width: 220px;
         left: 50%;
         transform: translateX(-50%);
 
@@ -880,6 +884,7 @@
 
 /* Medias right */
 #media{
+    display: none; /* Temporary */
     position: fixed;
     top: 38%;
     right: 0;
@@ -1012,8 +1017,8 @@
 }
 
 .overlay-products{
-    position: absolute;
-    margin-top: -190px;
+    position: fixed;
+    margin-top: -250px;
     left: 0;
     background-color: rgba(0, 0, 0, 0.2);
     height: calc(100% + 190px);
@@ -1264,6 +1269,14 @@
 
                 .prod-prop-img{
                     height: 100%;
+                    min-width: 15px;
+                }
+
+                .netto-img{min-width: 32px;}
+                .brutto-img{min-width: 30px;}
+
+                .prod-prop-img > picture{
+                    height: 100%;
                 }
 
                     .prod-prop-img > picture > svg{
@@ -1416,6 +1429,13 @@
         .product-links-col2:hover{background-color: var(--main-col)}
         .product-links-col2:hover h3{color: var(--main-col-light)}
 
+        a:not([href]) {background-color: lightgray;}
+        a:not([href]):hover {background-color: lightgray;}
+        a:not([href]) h3{color: gray;}
+        a:not([href]):hover h3 {background-color: lightgray; color: gray;}
+        a:not([href]) .nährwerte-img{background-color: gray;}
+        a:not([href]) .wikipedia-img{background-color: gray;}
+
         /* Product Description add cart part*/
         /* ==================================================================== */
 
@@ -1528,10 +1548,33 @@
 
     #paginator > section{
         display: flex;
-        width: 300px;
+        width: 400px;
         flex-wrap: wrap;
         justify-content: center;
     }
+
+        #load-products{
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            background-color: white;
+            border: var(--main-col) solid 3px;
+            border-radius: 20px;
+            font-family: open-sans;
+            font-size: var(--txt-mittel);
+            font-weight: bold;
+            color: var(--main-col);
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }#load-products:hover{
+            background-color: var(--main-col);
+            color: var(--main-col-light);
+        }
+
+        #products-loaded{
+            font-family: open-sans;
+            font-size: var(--txt-normal);
+            color: var(--main-col);
+        }
 
 /* ==================================================================== */
 /* ==================================================================== */
@@ -1614,6 +1657,8 @@
         font-size: 18px;
     }
 
+        #select-esskultur{margin-top: 9px;}
+
 
     /* Additional main Header */
     /* Left part language */
@@ -1645,6 +1690,19 @@
         flex-wrap: wrap;
     }
 
+    #category-selector{
+        background-position:
+        calc(100% - 19px) calc(1em + -6px),
+        calc(100% - 9px) calc(1em + -6px),
+        calc(100% - 2em) 0;
+    }
+
+    #category-selector:focus{
+        background-position:
+        calc(100% - 9px) 1em,
+        calc(100% - 19px) 1em,
+        calc(100% - 2em) 0.5em;
+    }
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
@@ -1735,6 +1793,8 @@
         transform: translateX(-50%)!important;
     }
 
+    #select-esskultur{width: 180px;}
+
 
     /* Additional main Header */
 
@@ -1750,26 +1810,11 @@
         border-radius: 0 0 5px 5px;
     }
 
-
-    .vendor-properties-wrapper{
-        margin: 0 4px;
-    }
-
-    #additional-main-header-right{
-        min-width: 330px;
-    }
-
-    #additional-main-header-left{
-        min-width: auto;
-    }
-
-    .language-triangle{
-        border-width: 12px 15px 0 15px;
-    }
-
-    .language-wrapper{
-        width: 50px;
-    }
+    .vendor-properties-wrapper{margin: 0 4px;}
+    #additional-main-header-right{min-width: 330px;}
+    #additional-main-header-left{min-width: auto;}
+    .language-triangle{border-width: 12px 15px 0 15px;}
+    .language-wrapper{width: 50px;}
 
     /* Vendor Filter */
     #vendor-filter > aside{
@@ -1780,6 +1825,19 @@
         height: 24px;
     }
 
+    #category-selector{
+        background-position:
+        calc(100% - 19px) calc(1em + -6px),
+        calc(100% - 9px) calc(1em + -6px),
+        calc(100% - 3em) 0;
+    }
+
+    #category-selector:focus{
+        background-position:
+        calc(100% - 9px) 1em,
+        calc(100% - 19px) 1em,
+        calc(100% - 3em) 0.5em;
+    }
 
     /* Produktwrapper */
     :root{
@@ -1788,21 +1846,10 @@
         --desc-header-height: 35px;
     }
 
-    .product-flag-img{
-        width: 35px;
-    }
-
-    .product-vendor{
-        height: 22px;
-    }
-
-    .product-description{
-        left: 206px;
-    }
-
-    .desc-links{
-        left: -431px;
-    }
+    .product-flag-img{width: 35px;}
+    .product-vendor{height: 22px;}
+    .product-description{left: 206px;}
+    .desc-links{left: -431px;}
 
         .product-properties{
             height: 28px;
@@ -2095,7 +2142,11 @@
     #logo{width: 152.5px!important;}
     #page-main-nav{height: 70px;}
     .nav-img{height: 50%!important;}
-    #page-main-nav > ul{margin-top: 5px;}
+    #page-main-nav > ul{
+        height: 63px;
+        margin-top: 5px;
+    }
+    #page-main-nav > ul > li{height: 100%;}
     #page-main-nav > ul > li > .nav-title{font-size: 14px;}
 
     #search-product-container{left: calc(-100vw + 70px);}
@@ -2134,6 +2185,10 @@
     .product-description{
         top: 333px;
     }
+
+    .prod-prop-img{min-width: 10px;}
+    .netto-img{min-width: 20px;}
+    .brutto-img{min-width: 20px;}
 }
 @media (max-height: 720px) and (max-width: 400px) {.product-description{height: 320px}}
 @media (max-height: 700px) and (max-width: 400px) {.product-description{height: 300px}}
@@ -2194,4 +2249,14 @@
         top: 178px;
         height: 350px;
     }
+}
+
+/* Position left Display-border fixed elements*/
+@media (max-height: 900px){
+    #search-product-container{top: 38%;}
+    #vendor-filter{top: 50%;}
+}
+@media (max-height: 700px){
+    #search-product-container{top: 45%;}
+    #vendor-filter{top: 58%;}
 }
