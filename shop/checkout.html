@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
     <title>FoodPort - Warenkorb</title>
 
     <style>
@@ -177,15 +178,17 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                         </ul>
                     </li>
                     <li id="nav-login">
-                        <div class="nav-img">
-                            <svg version="1.1" id="account-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
-                                <path id="account-icon-pfad" class="main-nav-svg-color" d="M250,0C112.5,0,0,112.5,0,250s112.5,250,250,250s250-112.5,250-250S387.5,0,250,0z
-                                    M250,75c42.5,0,75,32.5,75,75s-32.5,75-75,75s-75-32.5-75-75S207.5,75,250,75z M250,430c-62.5,0-117.5-32.5-150-80
-                                    c0-50,100-77.5,150-77.5S400,300,400,350C367.5,397.5,312.5,430,250,430z"/>
-                            </svg>
-                        </div>
-                        <h2 class="nav-title">Anmelden</h2>
+                        <a href="login.html">
+                            <div class="nav-img">
+                                <svg version="1.1" id="account-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                    y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+                                    <path id="account-icon-pfad" class="main-nav-svg-color" d="M250,0C112.5,0,0,112.5,0,250s112.5,250,250,250s250-112.5,250-250S387.5,0,250,0z
+                                        M250,75c42.5,0,75,32.5,75,75s-32.5,75-75,75s-75-32.5-75-75S207.5,75,250,75z M250,430c-62.5,0-117.5-32.5-150-80
+                                        c0-50,100-77.5,150-77.5S400,300,400,350C367.5,397.5,312.5,430,250,430z"/>
+                                </svg>
+                            </div>
+                            <h2 class="nav-title">Anmelden</h2>
+                        </a>
                     </li>
                     <li id="nav-cart">
                         <a href="checkout.html">
@@ -208,6 +211,10 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
         <button onclick="window.location.href='index.html'" id="btn-back-to-shop">← Zurück zum Shop</button>
 
 </header>
+                                <!-- ======================================================== -->
+                                <!-- ====================== Page Main ===================== -->
+                                <!-- ======================================================== -->
+
 <main id="cart-page-main">
 
     <!-- Informations -->
@@ -218,12 +225,12 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
             <li>
                 <p>Markieren Sie Produkte mit:</p>
                 <div class="info-img"><picture>❗️</picture></div>
-                <button class="info-meaning">Was bedeutet das?</button>
+                <button class="info-meaning"><span>Was bedeutet das?</span></button>
             </li>
             <li>
                 <p>Zu wenig Produkte bei:</p>
                 <div class="info-img" style="width: 100px;"><picture><img src="img/vendor-logo/mago_logo (Vektorisiert).svg" alt=""></picture></div>
-                <button class="info-meaning">Was bedeutet das?</button>
+                <button class="info-meaning"><span>Was bedeutet das?</span></button>
             </li>
             <li style="width: 500px">
                 <p>Random text</p>
@@ -253,8 +260,9 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
         <div class="cart-warning"></div>
 
         <header class="cart-header">
-            <h2 class="cart-header-title section-title">Warenkorb</h2>
+            <h2 class="cart-header-title"><span class="section-title">Warenkorb</span></h2>
             <section class="title-qty"><h4>Stk</h4></section>
+            <section class="title-img"></section>
             <section class="title-desc"><h4>Produktbeschreibung</h4></section>
             <section class="title-net"><h4>Gew./Vol.</h4></section>
             <div class="title-net-img">
@@ -390,7 +398,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
             </section>
 
             <section class="refresh-calc">
-                <h4>Menge neu berechnen:</h4>
+                <h3>Menge neu berechnen:</h3>
                 <button class="btn-refresh">
                     <div class="refresh-icon-img">
                         <picture></picture>
@@ -399,14 +407,14 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
                 </button>
             </section>
 
-            <h4 class="tot-prod-title">Total Produkte</h4>
+            <h4 class="tot-prod-title">Total Produkte:</h4>
             <div class="tot-prod-gross"><data>0.52</data><span>kg</span></div>
             <div class="tot-prod-price"><data>4.50</data><span>CHF</span></div>
 
-            <div class="tot-del-title"><h4>Lieferkosten:</h4></div>
+            <h4 class="tot-del-title">Lieferkosten:</h4>
             <div class="tot-del-price"><data>7.95</data><span>CHF</span></div>
 
-            <div class="tot-title"><h4>Total:</h4></div>
+            <h4 class="tot-title">Total:</h4>
             <div class="tot-price"><data>33.00</data><span>CHF</span></div>
         </footer>
 
@@ -509,7 +517,7 @@ Schalte ihn ein, um alle Funktionalitäten zu erhalten!
             </section>
 
             <h4 class="tot-vendor-price-title">Gesamtkosten</h4>
-            <section class="tot-vendor-price"><data>200.00</data><span>CHF</span></section class="tot-vendor-price">
+            <section class="tot-vendor-price"><data>200.00</data><span>CHF</span></section>
         </section>
 
     </article>

@@ -1,0 +1,111 @@
+body > main{
+    margin: 0 50px;
+}
+
+body > main > form{
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+    border: 2px solid var(--main-col);
+    margin-top: 50px;
+}
+
+body > main > form > label,
+body > main > form > input{
+    font-size: var(--txt-gross);
+}
+
+#login-page-main > form > input{
+    height: 60px;
+    width: 90%;
+    padding: 0 20px
+}
+
+body > main > form > aside{
+    background-color: var(--main-col);
+    grid-area: aside;
+    height: 100%;
+    width: 100%;
+}
+
+body > main > form > aside *{color: var(--main-col-light)}
+
+#login{
+    display: grid;
+    grid-template-rows: 100px 100px 20px 80px;
+    grid-template-columns: 100px 270px 70px auto;
+    grid-template-areas:
+    "aside label1 img1 input1"
+    "aside label2 img2 input2"
+    "aside forgotten forgotten forgotten"
+    "aside confirm confirm confirm"
+    ;
+}
+
+.email-label{grid-area: label1;}
+#message-img{grid-area: img1;}
+#email{grid-area: input1;}
+
+.password-label{grid-area: label2;}
+#lock-img{grid-area: img2;}
+#password{grid-area: input2;}
+
+#forgotten-pw{grid-area: forgotten;}
+#submit-login{grid-area: confirm;}
+
+.email-label, .password-label{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+#register{
+    display: grid;
+    grid-template-rows: 40px 70px;
+    grid-template-columns: 100px auto;
+    grid-template-areas: 
+    "aside register1"
+    "aside register2"
+    ;
+}
+
+#register > h2{grid-area: register1}
+#btn-register-now{grid-area: register2}
+
+#forgotten-pw,
+#submit-login,
+#register > h2,
+#btn-register-now{
+    margin: 0 auto;
+    width: max-content;
+}
+
+#btn-register-now,
+#submit-login,
+#btn-back-to-shop{
+    height: 60px;
+    font-size: var(--txt-gross);
+    background-color: white;
+    border: 3px var(--main-col) solid;
+    width: 300px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#btn-register-now:hover,
+#submit-login:hover,
+#btn-back-to-shop:hover{
+    background-color: var(--main-col);
+    color: var(--main-col-light);
+}
+
+#btn-back-to-shop{
+    color: var(--main-col);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 25px;
+}
+
+
+/* Personal information part */
